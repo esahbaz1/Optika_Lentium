@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Zakazite pregled";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/preg.css">
+    <title>Zakazivanje pregleda</title>
+</head>
+<body>
+
+    <center><h2>Zakazivanje pregleda</h2></center>
+    <div>
+        <div>
+            <div class="container">
+                <form action="submit_phpcrm_form.php" method="post">
+
+
+                    <h3>Podaci o pacijentu</h3>
+                    <label for="name">Ime i prezime</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Broj telefona</label>
+                    <input type="number" id="phone" name="phone" required>
+
+
+                    <div>
+                        <div>
+                            <label for="date">Datum zakazivanja</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="gender">Spol:</label>
+                            <select name="gender" id="gender">
+                                <option value="Male">Muško</option>
+                                <option value="Female">Žensko</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="age">Broj godina</label>
+                            <input type="number" id="age" name="age" required>
+
+
+                        </div>
+                    </div>
+                    <label>Da li ste prije zakazivali termin u našim poslovnicama?</label><br>
+                    <input type="radio" id="yes" name="attend" value="Yes">
+                    <label for="yes">Da</label><br>
+                    <input type="radio" id="no" name="attend" value="No">
+                    <label for="no">Ne</label><br><br>
+
+                    <input type="submit" value="Potvrdi" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "Najbliza lokacija";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pronadi najblizu radnju</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0; 
+            padding: 0; 
+            font-family: Courier New, monospace;
+        }
+        #map {
+            height: 500px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #locationInput {
+            margin-top: 20px;
+            margin-left: 350px;
+            width: 800px;
+            height: 30px;
+        }
+
+        #findButton{
+            height: 30px;
+            width: 100px;
+            font-size: 18px;
+            background-color: #c19770; /* Button background color */
+            color: white; /* Button text color */
+          
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        #findButton:hover {
+            opacity: 0.8; /* Reduce opacity on hover for visual feedback */
+        }
+
+        #result {
+            margin-top: 20px;
+            margin-left: 350px;
+        }
+
+        h1 {
+            text-align: center; 
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pronađi najbližu poslovnicu</h1>
+    <div id="map"></div>
+    <input type="text" id="locationInput" placeholder="Unesite svoju adresu">
+    <button id="findButton" onclick="findNearestStore()">Pronađi</button>
+    <div id="result"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([43.8563, 18.4131], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var storeLocations = [
+            { name: "Kulina Bana 31", address: "71000 Sarajevo", coordinates: [43.8597, 18.4322] },
+            { name: "Džemala Bijedića 160", address: "71000 Sarajevo", coordinates: [43.8553, 18.3864] },
+            { name: "Ložionička 16", address: "71000 Sarajevo", coordinates: [43.8547, 18.4337] },
+            { name: "Trg djece Sarajevo 1", address: "71000 Sarajevo", coordinates: [43.8521, 18.4084] }
+        ];
+
+        function findNearestStore() {
+            var userAddress = document.getElementById("locationInput").value;
+
+            // Clear previous markers
+            map.eachLayer(function (layer) {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            // Geocode user's address (for demonstration purposes, this is simulated)
+            var userCoordinates = geocodeUserAddress(userAddress);
+
+            // Calculate distances to all stores
+            var nearestStore = calculateNearestStore(userCoordinates);
+
+            // Display result
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "Najbliza prodavnica je na adresi: " + nearestStore.name + ", " + nearestStore.address;
+
+            // Add marker for the nearest store
+            L.marker(nearestStore.coordinates).addTo(map)
+                .bindPopup(nearestStore.name + "<br>" + nearestStore.address)
+                .openPopup();
+        }
+
+        function geocodeUserAddress(address) {
+            // Simulate geocoding by mapping pre-defined addresses to coordinates
+            switch (address.toLowerCase()) {
+                case "kulina bana 31":
+                    return [43.8597, 18.4322];
+                case "džemala bijedića 160":
+                    return [43.8553, 18.3864];
+                case "ložionička 16":
+                    return [43.8547, 18.4337];
+                case "trg djece sarajevo 1":
+                    return [43.8521, 18.4084];
+                default:
+                    // Default coordinates if address not found
+                    return [43.8563, 18.4131];
+            }
+        }
+
+        function calculateNearestStore(userCoordinates) {
+            var nearestStore = storeLocations[0];
+            var shortestDistance = calculateDistance(userCoordinates, nearestStore.coordinates);
+
+            for (var i = 1; i < storeLocations.length; i++) {
+                var distance = calculateDistance(userCoordinates, storeLocations[i].coordinates);
+                if (distance < shortestDistance) {
+                    shortestDistance = distance;
+                    nearestStore = storeLocations[i];
+                }
+            }
+
+            return nearestStore;
+        }
+
+        function calculateDistance(coords1, coords2) {
+            // Haversine formula to calculate distance between two sets of coordinates
+            var R = 6371; // Radius of the Earth in kilometers
+            var lat1 = deg2rad(coords1[0]);
+            var lon1 = deg2rad(coords1[1]);
+            var lat2 = deg2rad(coords2[0]);
+            var lon2 = deg2rad(coords2[1]);
+            var dLat = lat2 - lat1;
+            var dLon = lon2 - lon1;
+            var a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1) * Math.cos(lat2) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var distance = R * c; // Distance in kilometers
+            return distance;
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+    </script>
+</body>
+</html>
