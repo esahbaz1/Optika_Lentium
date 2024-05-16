@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Pocetna strana";
+    Layout = null;
+}
+
+@using Optika_Lentium.Models
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optika Lentium</title>
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="/images/logo1-removebg-preview.png">
+            </div>
+            <ul>
+                <li class="btn"><a href="#">Početna</a></li>
+                <li class="dropdown">
+                    <a href="#" class="btn">Meni</a>
+                    <div class="dropdown-content">
+                        <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Okviri">Dioptrijski okviri</a>
+                        <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Naocale">Sunčane naočale</a>
+                        <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Lece">Leće i otopine</a>
+                        <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Asesoari">Asesoari</a>
+                        <a class="btn" asp-area="" asp-controller="Home" asp-action="ZakPregledaView">Zakaži pregled</a>
+                    </div>
+                </li>
+                <li><a class="btn" asp-area="" asp-controller="Home" asp-action="SignupView">Sign up</a></li>
+                <li><a class="btn" asp-area="" asp-controller="Home" asp-action="LoginView">Log in</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            <h1 align="center">
+                <font>
+                    Optika Lentium
+                </font>
+            </h1>
+        </div>
+        <div class="button">
+            <a class="btn" asp-area="" asp-controller="Home" asp-action="LokacijaView">Saznajte najbližu lokaciju</a>
+            <a class="btn" asp-area="" asp-controller="Home" asp-action="KontaktView">Kontaktirajte nas</a>
+        </div>
+    </header>
+</body>
+</html>

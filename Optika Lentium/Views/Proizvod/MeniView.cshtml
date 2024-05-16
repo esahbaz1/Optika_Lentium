@@ -2,6 +2,10 @@
     ViewData["Title"] = "Meni";
     Layout = null;
 }
+
+@using Optika_Lentium.Patterns;
+@inject IProizvod ProizvodService
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +30,7 @@
     <link href="css/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/Meni.css" rel="stylesheet">
+    <link href="~/css/Meni.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +38,6 @@
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
-
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
@@ -134,7 +137,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Početna</a>
+                            <a href="~/View/Home/Index.cshtml" class="nav-item nav-link">Početna</a>
                             <a href="shop.html" class="nav-item nav-link active">Pregled</a>
 
                             <a href="contact.html" class="nav-item nav-link">Kontakt</a>
@@ -296,27 +299,34 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                        <div class="card product-item border-0 mb-4">
-                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="images/cale1.jpg" alt="">
-                            </div>
-                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                <h6 class="text-truncate mb-3">Dolce&Gabbana</h6>
-                                <div class="d-flex justify-content-center">
-                                    <h6>425.00 KM</h6>
+
+                    @foreach (Proizvod p in ProizvodService.GetFilteredProducts())
+                    {
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                                    <img class="img-fluid w-100" src=@p.slikaURL alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">@p.nazivProizvod</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>@p.cijena KM</h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a class="btn btn-sm text-dark p-0" asp-area="" asp-controller="Proizvod" asp-action="PregledProView" asp-route-id="@p.proizvodId"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
                                 </div>
                             </div>
-                            <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
-                            </div>
                         </div>
-                    </div>
+                    }
+
+
+                    <!--
                     <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
                             <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="images/cale2.jpg" alt="">
+                                <img class="img-fluid w-100" src="~/images/cale2.jpg" alt="">
                             </div>
                             <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                 <h6 class="text-truncate mb-3">Vogue</h6>
@@ -325,7 +335,7 @@
                                 </div>
                             </div>
                             <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a asp-page="/ProizvodView" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
+                                <a asp-area="" asp-controller="Proizvod" asp-action="PregledProView" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
                                 <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
                             </div>
                         </div>
@@ -333,7 +343,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
                             <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="images/cale3.jpg" alt="">
+                                <img class="img-fluid w-100" src="~/images/cale3.jpg" alt="">
                             </div>
                             <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                 <h6 class="text-truncate mb-3">Esprit</h6>
@@ -350,7 +360,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
                             <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="images/cale4.jpg" alt="">
+                                <img class="img-fluid w-100" src="~/images/cale4.jpg" alt="">
                             </div>
                             <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                 <h6 class="text-truncate mb-3">Vogue</h6>
@@ -367,7 +377,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
                             <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="images/cale5.jpg" alt="">
+                                <img class="img-fluid w-100" src="~/images/cale5.jpg" alt="">
                             </div>
                             <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                 <h6 class="text-truncate mb-3">Vogue</h6>
@@ -384,7 +394,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
                             <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="images/cale6.jpg" alt="">
+                                <img class="img-fluid w-100" src="~/images/cale6.jpg" alt="">
                             </div>
                             <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                 <h6 class="text-truncate mb-3">Adidas</h6>
@@ -398,6 +408,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
 
 
                     <div class="col-12 pb-1">
