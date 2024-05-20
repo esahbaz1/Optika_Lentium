@@ -21,9 +21,18 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
-        public IActionResult MeniView(string tip)
+
+        [HttpGet]
+        public IActionResult MeniView(string tip, string pol)
         {
-            _proizvodService.FilterProductsByTip(tip);
+            if (pol == null || pol == "")
+            {
+                _proizvodService.FilterProductsByTip(tip);
+            }
+            else
+            {
+                _proizvodService.FilterProductsByPol(tip, pol);
+            }
             return View();
         }
 
@@ -31,5 +40,29 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
+
+        public IActionResult KontaktView()
+        {
+            return View();
+        }
+
+        public IActionResult LoginView()
+        {
+            return View();
+        }
+        public IActionResult SignupView()
+        {
+            return View();
+        }
+
+        public IActionResult Placanje()
+        {
+            return View();
+        }
+        public IActionResult KorpaView()
+        {
+            return View();
+        }
+
     }
 }
