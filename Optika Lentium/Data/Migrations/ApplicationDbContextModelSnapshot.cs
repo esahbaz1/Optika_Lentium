@@ -74,71 +74,6 @@ namespace Optika_Lentium.Data.Migrations
                     b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -224,6 +159,416 @@ namespace Optika_Lentium.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Optika_Lentium.Models.Korisnik", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("ime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("korisnikId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("kupacId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("prezime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("radnikId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("sifra")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("vlasnikId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Lokacija", b =>
+                {
+                    b.Property<int>("lokacijaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("lokacijaId"));
+
+                    b.Property<string>("lokacijaKorisnikaURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("lokacijaOptikeURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("lokacijaId");
+
+                    b.ToTable("Lokacija", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.LokacijaKorisnik", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("korisnikId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("kupacId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("lokacijaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("radnikID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("vlasnikID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LokacijaKorisnik", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.NacinPlacanja", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("placanjeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("vrsta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("placanjeId")
+                        .IsUnique();
+
+                    b.ToTable("NacinPlacanja", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Narucivanje", b =>
+                {
+                    b.Property<int>("narucivanjeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("narucivanjeId"));
+
+                    b.Property<string>("korisnikId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("placanjeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("proizvodId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("ukupniRacunZaPlacanje")
+                        .HasColumnType("float");
+
+                    b.Property<int>("zaliha")
+                        .HasColumnType("int");
+
+                    b.HasKey("narucivanjeId");
+
+                    b.HasIndex("korisnikId");
+
+                    b.HasIndex("placanjeId");
+
+                    b.ToTable("Narucivanje", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.NoviKorisnik", b =>
+                {
+                    b.Property<int>("korisnikId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("korisnikId"));
+
+                    b.Property<string>("ime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("kupacId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("prezime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("radnikId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("sifra")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("vlasnikId")
+                        .HasColumnType("int");
+
+                    b.HasKey("korisnikId");
+
+                    b.ToTable("NoviKorisnik", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Placanje", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("bankovniRacun")
+                        .HasColumnType("bit");
+
+                    b.Property<double>("iznosPlacanja")
+                        .HasColumnType("float");
+
+                    b.Property<string>("korisnikId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("valProizvodId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("korisnikId");
+
+                    b.ToTable("Placanje", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Popust", b =>
+                {
+                    b.Property<int>("popustId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("popustId"));
+
+                    b.Property<int>("brojOstvarenihNarudzbi")
+                        .HasColumnType("int");
+
+                    b.Property<int>("placanjeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("popustId");
+
+                    b.HasIndex("placanjeId")
+                        .IsUnique();
+
+                    b.ToTable("Popust", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.PregledKorisnik", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("korisnikId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("kupacId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("pregledId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("radnikID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("vlasnikID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PregledKorisnik", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Proizvod", b =>
+                {
+                    b.Property<int>("proizvodId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("proizvodId"));
+
+                    b.Property<double>("cijena")
+                        .HasColumnType("float");
+
+                    b.Property<int>("kategorija")
+                        .HasColumnType("int");
+
+                    b.Property<string>("nazivProizvod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("slikaURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("tip")
+                        .HasColumnType("int");
+
+                    b.HasKey("proizvodId");
+
+                    b.ToTable("Proizvod", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.ProizvodKorisnik", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("korisnikId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("kupacId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("proizvodId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("radnikID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("vlasnikID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProizvodKorisnik", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.ValidacijaProizvoda", b =>
+                {
+                    b.Property<int>("valProizvodId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("valProizvodId"));
+
+                    b.Property<int>("narucivanjeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("stanjeProizvoda")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("uspjesnaValidacija")
+                        .HasColumnType("bit");
+
+                    b.HasKey("valProizvodId");
+
+                    b.ToTable("ValidacijaProizvoda", (string)null);
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.ZakazivanjePregleda", b =>
+                {
+                    b.Property<int>("pregledId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("pregledId"));
+
+                    b.Property<DateTime>("datum")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("korisnikId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("potvrdaZakazivanja")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("pregledId");
+
+                    b.HasIndex("korisnikId");
+
+                    b.ToTable("ZakazivanjePregleda", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -235,7 +580,7 @@ namespace Optika_Lentium.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Optika_Lentium.Models.Korisnik", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -244,7 +589,7 @@ namespace Optika_Lentium.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Optika_Lentium.Models.Korisnik", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -259,7 +604,7 @@ namespace Optika_Lentium.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Optika_Lentium.Models.Korisnik", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -268,10 +613,74 @@ namespace Optika_Lentium.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Optika_Lentium.Models.Korisnik", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.NacinPlacanja", b =>
+                {
+                    b.HasOne("Optika_Lentium.Models.Placanje", null)
+                        .WithOne("nacinPlacanja")
+                        .HasForeignKey("Optika_Lentium.Models.NacinPlacanja", "placanjeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Narucivanje", b =>
+                {
+                    b.HasOne("Optika_Lentium.Models.Korisnik", "korisnik")
+                        .WithMany()
+                        .HasForeignKey("korisnikId");
+
+                    b.HasOne("Optika_Lentium.Models.Placanje", "placanje")
+                        .WithMany()
+                        .HasForeignKey("placanjeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("korisnik");
+
+                    b.Navigation("placanje");
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Placanje", b =>
+                {
+                    b.HasOne("Optika_Lentium.Models.Korisnik", "korisnik")
+                        .WithMany()
+                        .HasForeignKey("korisnikId");
+
+                    b.Navigation("korisnik");
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Popust", b =>
+                {
+                    b.HasOne("Optika_Lentium.Models.Placanje", null)
+                        .WithOne("Popust")
+                        .HasForeignKey("Optika_Lentium.Models.Popust", "placanjeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.ZakazivanjePregleda", b =>
+                {
+                    b.HasOne("Optika_Lentium.Models.Korisnik", "korisnik")
+                        .WithMany()
+                        .HasForeignKey("korisnikId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("korisnik");
+                });
+
+            modelBuilder.Entity("Optika_Lentium.Models.Placanje", b =>
+                {
+                    b.Navigation("Popust")
+                        .IsRequired();
+
+                    b.Navigation("nacinPlacanja")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

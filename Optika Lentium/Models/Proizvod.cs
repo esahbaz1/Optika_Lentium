@@ -18,6 +18,7 @@ namespace Optika_Lentium.Models
     }
     public class Proizvod
     {
+        [Key]
         public int proizvodId { get; set; } 
         public string nazivProizvod {  get; set; }  
         public double cijena { get; set; }  

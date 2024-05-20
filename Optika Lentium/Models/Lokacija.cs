@@ -5,7 +5,8 @@ namespace Optika_Lentium.Models
 {
     public class Lokacija
     {
-        public int lokacijaID { get; set; }
+        [Key]
+        public int lokacijaId { get; set; }
         public string lokacijaOptikeURL { get; set; }
         public string lokacijaKorisnikaURL { get; set; }
         

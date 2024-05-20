@@ -4530,19 +4530,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\emina\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\fakultet\\aplikacija\\Optika Lentium\\Optika Lentium.csproj",
+      "projectUniqueName": "C:\\Users\\emina\\Source\\Repos\\novi\\Optika Lentium\\Optika Lentium.csproj",
       "projectName": "Optika Lentium",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\fakultet\\aplikacija\\Optika Lentium\\Optika Lentium.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\fakultet\\aplikacija\\Optika Lentium\\obj\\",
+      "projectPath": "C:\\Users\\emina\\Source\\Repos\\novi\\Optika Lentium\\Optika Lentium.csproj",
+      "packagesPath": "C:\\Users\\emina\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emina\\Source\\Repos\\novi\\Optika Lentium\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

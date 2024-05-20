@@ -6,6 +6,7 @@ namespace Optika_Lentium.Models
 {
     public class ZakazivanjePregleda
     {
+        [Key]
         public int pregledId {  get; set; } 
         public Korisnik korisnik { get; set; }  
         public DateTime datum { get; set; } 
