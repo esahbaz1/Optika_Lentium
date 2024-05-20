@@ -1,11 +1,19 @@
 ﻿body {
     font-family: Arial;
     font-size: 16px;
-    padding: 6px;
+    padding: 30px;
+    background-image: url(../images/oci.jpg);
+    backdrop-filter: blur(5px);
+    /* Optional: Add a background color to make the background darker */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+    color: #000f;
 }
 
 * {
     box-sizing: border-box;
+    color: #000000;
 }
 
 .row {
@@ -14,6 +22,7 @@
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     margin: 0 -16px;
+    color: #000000;
 }
 
 
@@ -35,38 +44,28 @@
 }
 
 .container {
-    background-color: #004220;
+    background-color: transparent;
     padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-    max-width: 700px;
+    max-width: 1000px;
     margin: auto;
-    height: 650px;
 }
 
-.container1 {
-    background-color: #fff;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-    max-width: 600px;
-    margin: auto;
-    height: 650px;
-}
+
 
 input[type=text] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 3px;
+    color: #000000;
 }
 
 input[type=datetime-local] {
     width: 100%;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 3px;
 }
 
@@ -75,7 +74,7 @@ input[type=email], textarea, select {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 3px;
 }
 
@@ -83,7 +82,7 @@ input[type=number] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 3px;
 }
 
@@ -91,23 +90,23 @@ input[type=text] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 3px;
 }
 
 input[type=time] {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 3px;
 }
 
 input[type=date] {
     width: 100%;
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 50px;
+    border: 1px solid #fff;
     border-radius: 3px;
 }
 

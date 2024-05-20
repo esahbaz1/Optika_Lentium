@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R1RX4dFfJNCuCjzifcrSCyAdo4O7WAt/t81Da677wetAeD3mbHanZrG25Qob4Dh4AVH0bAxBx4iGc89CP3aG0g==",
+  "dgSpecHash": "FVCdDnDPzFHzwmsDGrNo8QVlaQ0wdxhLmPhqGIO3oTlh3vT44u9jJQIFEob2B9xiHGbSEtgRzm9RdEcyB46esQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emina\\source\\repos\\novi\\Optika Lentium\\Optika Lentium.csproj",
+  "projectFilePath": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emina\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\emina\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

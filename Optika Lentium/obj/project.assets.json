@@ -4535,11 +4535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emina\\Source\\Repos\\novi\\Optika Lentium\\Optika Lentium.csproj",
+      "projectUniqueName": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
       "projectName": "Optika Lentium",
-      "projectPath": "C:\\Users\\emina\\Source\\Repos\\novi\\Optika Lentium\\Optika Lentium.csproj",
+      "projectPath": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
       "packagesPath": "C:\\Users\\emina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emina\\Source\\Repos\\novi\\Optika Lentium\\obj\\",
+      "outputPath": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\emina\\AppData\\Roaming\\NuGet\\NuGet.Config",

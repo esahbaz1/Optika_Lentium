@@ -7,8 +7,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/preg.css">
-    <title>Zakazivanje pregleda</title>
+    <link rel="stylesheet" href="/css/pregled.css">
+    <title>Appointment Contact Form</title>
 </head>
 <body>
 
@@ -16,50 +16,56 @@
     <div>
         <div>
             <div class="container">
+
                 <form action="submit_phpcrm_form.php" method="post">
 
 
-                    <h3>Podaci o pacijentu</h3>
-                    <label for="name">Ime i prezime</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phone">Broj telefona</label>
-                    <input type="number" id="phone" name="phone" required>
-
 
                     <div>
                         <div>
-                            <label for="date">Datum zakazivanja</label>
-                            <input type="date" id="date" name="date" required>
+                            <br>
+                            <label for="name"></label>
+                            <input type="text" id="fname" name="name" placeholder="Ime i prezime" required>
+
+
+                            <label for="email"></label>
+                            <input type="text" id="email" name="email" placeholder="Email" required>
+
+
+                            <label for="phone"></label>
+                            <input type="number" id="phone" name="phone" placeholder="Broj telefona" required>
+
+
+
+                            <textarea id="Message" name="Message" placeholder="Posebna napomena" style="height:230px" required></textarea>
+
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <label for="gender">Spol:</label>
-                            <select name="gender" id="gender">
-                                <option value="Male">Muško</option>
-                                <option value="Female">Žensko</option>
-                            </select>
+
+                            <label><b>Kako Vas možemo kontaktirati?</b></label><br>
+                            <input type="radio" id=" Telefonski poziv" name="radio" value="Telefonski poziv" style="margin-left:13px;">&nbspTelefonski poziv<label for="Telefonski poziv"></label><br>
+                            <input type="radio" id="Email" name="radio" value="Email" style="margin-left:13px;">&nbspEmail<label for="Email"></label><br><br>
+                            <label><b>Odaberite dan pregleda:</b></label><br>
+                            <input type="checkbox" id="day1" name="day1" value="Ponedjeljak">
+                            <label for="day1">Ponedjeljak</label><br>
+                            <input type="checkbox" id="day2" name="day2" value="Tuesday">
+                            <label for="day2">Utorak</label><br>
+                            <input type="checkbox" id="day3" name="day3" value="Wednesday">
+                            <label for="day3">Srijeda</label><br>
+                            <input type="checkbox" id="day4" name="day4" value="Thursday">
+                            <label for="day4">Četvrtak</label><br>
+                            <input type="checkbox" id="day5" name="day5" value="Friday">
+                            <label for="day5">Petak</label><br><br>
+                            <label><b>Odaberite vrijeme pregleda:</b></label><br>
+                            <input type="checkbox" id="shift1" name="shift1" value="Morning">
+                            <label for="shift1">Jutro</label><br>
+                            <input type="checkbox" id="shift2" name="shift2" value="Evening">
+                            <label for="shift2">Podne</label><br>
                         </div>
-
-                        <div>
-                            <label for="age">Broj godina</label>
-                            <input type="number" id="age" name="age" required>
-
-
-                        </div>
-                    </div>
-                    <label>Da li ste prije zakazivali termin u našim poslovnicama?</label><br>
-                    <input type="radio" id="yes" name="attend" value="Yes">
-                    <label for="yes">Da</label><br>
-                    <input type="radio" id="no" name="attend" value="No">
-                    <label for="no">Ne</label><br><br>
-
-                    <input type="submit" value="Potvrdi" class="btn">
+                        <input type="submit" value="Pošaljite zahtjev" class="btn">
                 </form>
             </div>
         </div>
-    </div>
+
 </body>
 </html>
