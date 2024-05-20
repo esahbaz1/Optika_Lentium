@@ -1,18 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Optika_Lentium.Models;
 using Optika_Lentium.Patterns;
+using System.Security.Claims;
 
 namespace Optika_Lentium.Controllers
 {
 	public class NarudzbaController : Controller
 	{
 		private readonly ILogger<NarudzbaController> _logger;
-		private readonly IProizvod _proizvodService;
+		private readonly INarudzba _narudzbaService;
 
-		public NarudzbaController(ILogger<NarudzbaController> logger, IProizvod p)
+		public NarudzbaController(ILogger<NarudzbaController> logger, INarudzba p)
 		{
 			_logger = logger;
-			_proizvodService = p;
+			_narudzbaService = p;
 		}
 
 		public IActionResult Index()
@@ -20,12 +22,16 @@ namespace Optika_Lentium.Controllers
 			return View();
 		}
 
-		public List<IProizvod> ListaProizvoda = new List<IProizvod>();
-
 		public IActionResult KorpaView()
 		{
-			ListaProizvoda.Add(_proizvodService);
 			return View();
+		}
+
+		public async Task<IActionResult> AddToCart(int id)
+		{
+			_narudzbaService.AddToCart(1, id);
+			return Json(new { message = "Radi!" });
+
 		}
 
 		public IActionResult Placanje()

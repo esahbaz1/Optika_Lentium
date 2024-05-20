@@ -36,12 +36,23 @@ namespace Optika_Lentium.Controllers
             return View();
         }
 
-        public IActionResult PregledProView()
-        {
-            return View();
-        }
+		public async Task<IActionResult> PregledProView(int? id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
 
-        public IActionResult KontaktView()
+            var product = _proizvodService.GetAllProducts().Find(p => p.proizvodId == id);
+			if (product == null)
+			{
+				return NotFound();
+			}
+
+			return View(product);
+		}
+
+		public IActionResult KontaktView()
         {
             return View();
         }

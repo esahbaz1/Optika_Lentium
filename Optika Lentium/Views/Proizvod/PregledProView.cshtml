@@ -1,8 +1,9 @@
-﻿
+﻿@model Optika_Lentium.Models.Proizvod
 @{
 	ViewData["Title"] = "Proizvod";
 	Layout = null;
 }
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,30 +18,22 @@
 		<div class="product-details">
 
 			<!-- 	Product Name -->
-			<h1>Dioptrijski okvir</h1>
-
-
-
-
-			<!-- The most important information about the product -->
-			<p class="information">" Especially good for container gardening, the Angelonia will keep blooming all summer even if old flowers are removed. Once tall enough to cut, bring them inside and you'll notice a light scent that some say is reminiscent of apples. "</p>
-
-
+			<h1>@Model.nazivProizvod</h1>
 
 			<!-- 		Control -->
 			<div class="control">
 
 				<!-- Start Button buying -->
-				<button class="btn">
+				<button class="btn" id="addToCartBtn">
 					<!-- 		the Price -->
-					<span class="price">200 KM</span>
+					<span class="price">@Model.cijena KM</span>
 					<!-- 		shopping cart icon-->
 					<span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
 					<!-- 		Buy Now / ADD to Cart-->
 					<span class="buy">Dodaj u korpu</span>
 				</button>
 				<!-- End Button buying -->
-
+				<div id="message" class="message" style="display: none; "></div>
 			</div>
 
 		</div>
@@ -50,18 +43,16 @@
 
 		<div class="product-image">
 
-			<img src="/images/cale2.jpg" alt="Omar Dsoky">
+			<img src="@Model.slikaURL">
 
 			<!-- 	product Information-->
 			<div class="info">
 				<h2>Opis proizvoda</h2>
 				<ul>
-					<li><strong>Kategorija: </strong>Dioptrijski okviri</li>
-					<li><strong>Tip: </strong>Muske</li>
-					<li><strong>Naziv proizvoda: </strong>Dolce&Gabbana #dftdhdh</li>
-					<li><strong>Boja: </strong>Crna</li>
-					<li><strong>Vrsta: </strong>#DFG675</li>
-					<li><strong>Brend: </strong>Dolce&Gabbana</li>
+					<li><strong>Kategorija: </strong>@Model.tip</li>
+					<li><strong>Tip: </strong>@Model.kategorija</li>
+					<li><strong>Naziv proizvoda: </strong>@Model.nazivProizvod</li>
+					<li><strong>Brend: </strong>@Model.nazivProizvod</li>
 				</ul>
 			</div>
 		</div>
@@ -69,5 +60,28 @@
 
 
 	</div>
+
+	<script>
+		document.getElementById("addToCartBtn").addEventListener("click", function () {
+			document.getElementById("message").style.display = "block";
+			document.getElementById("message").textContent = "Proizvod dodan u korpu!";
+		});
+
+		document.getElementById('addToCartBtn').addEventListener('click', AddToCart);
+
+		async function AddToCart() {
+			const parameters = new URLSearchParams();
+			parameters.append("id", @Model.proizvodId.ToString());
+			const url = "/Narudzba/AddToCart?" + parameters.toString();
+
+			console.log(url);
+
+			const response = await fetch(url)
+				.then(result => result.json());
+
+			console.log(response);
+
+		}
+	</script>
 </body>
 </html>

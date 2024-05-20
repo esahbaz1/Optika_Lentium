@@ -237,8 +237,8 @@
             <!-- Shop Sidebar End -->
             <!-- Shop Product Start -->
             <div class="col-lg-9 col-md-12">
+                <div id="message" class="message" style="display: none; "></div>
                 <div class="row pb-3">
-                  
                     @foreach (Proizvod p in ProizvodService.GetFilteredProducts())
                     {
                         <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
@@ -254,7 +254,7 @@
                                 </div>
                                 <div class="card-footer d-flex justify-content-between bg-light border">
                                     <a class="btn btn-sm text-dark p-0" asp-area="" asp-controller="Proizvod" asp-action="PregledProView" asp-route-id="@p.proizvodId"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
+                                    <a href="javascript:AddToCart(@p.proizvodId)" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
                                 </div>
                             </div>
                         </div>
@@ -376,6 +376,23 @@
                 console.log(this.value)
 
             };
+        }
+
+
+        async function AddToCart(proizvodId) {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").textContent = "Proizvod dodan u korpu!";
+            const parameters = new URLSearchParams();
+            parameters.append("id", proizvodId);
+            const url = "/Narudzba/AddToCart?" + parameters.toString();
+
+            console.log(url);
+
+            const response = await fetch(url)
+                .then(result => result.json());
+
+            console.log(response);
+
         }
     </script>
 </body>
