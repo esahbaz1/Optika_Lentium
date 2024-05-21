@@ -122,8 +122,8 @@
                             </div>
                         </div>
 
-                        <a href="" class="nav-item nav-link">Leće i otopine</a>
-                        <a href="" class="nav-item nav-link">Asesoari</a>
+                        <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Lece">Leće i otopine</a>
+                        <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Asesoari">Asesoari</a>
 
                         
 
@@ -205,14 +205,14 @@
                 <!-- Size Start -->
                 <div class="mb-5">
                     <h5 class="font-weight-semi-bold mb-4">Filtrirano po brendu</h5>
-                    <form name="filterBrendovi">
+                    <form name="filterBrendovi" action="/Proizvod/FilterByBrend">
                         <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                             <input type="radio" name="filterBrandRadios" class="custom-control-input" value="svi" checked id="svi-brendovi">
                             <label class="custom-control-label" for="svi-brendovi">Svi brendovi</label>
                         </div>
                         <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
-                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Adidas" id="adidas">
-                            <label class="custom-control-label" for="adidas">Adidas</label>
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Alcon" id="adidas">
+                            <label class="custom-control-label" for="adidas">Alcon</label>
                         </div>
                         <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                             <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Gucci" id="gucci">
@@ -230,6 +230,7 @@
                             <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Vogue" id="vogue">
                             <label class="custom-control-label" for="vogue">Vogue</label>
                         </div>
+
                     </form>
                 </div>
                 <!-- Size End -->
@@ -305,7 +306,7 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Linkovi</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" asp-action="Index"><i class="fa fa-angle-right mr-2"></i>Pocetna</a>
+                            <a class="text-dark mb-2" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-angle-right mr-2"></i>Pocetna</a>
                             <a class="text-dark mb-2" asp-action="MeniView"><i class="fa fa-angle-right mr-2"></i>Pregled</a>
                             <a class="text-dark mb-2" asp-action="KorpaView"><i class="fa fa-angle-right mr-2"></i>Korpa</a>
                             <a class="text-dark mb-2" asp-action="Placanje"><i class="fa fa-angle-right mr-2"></i>Plaćanje</a>
@@ -362,18 +363,126 @@
     <script src="js/main.js"></script>
 
     <script>
+        function getAllUrlParams(url) {
+
+            // get query string from url (optional) or window
+            var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+            // we'll store the parameters here
+            var obj = {};
+
+            // if query string exists
+            if (queryString) {
+
+                // stuff after # is not part of query string, so get rid of it
+                queryString = queryString.split('#')[0];
+
+                // split our query string into its component parts
+                var arr = queryString.split('&');
+
+                for (var i = 0; i < arr.length; i++) {
+                    // separate the keys and the values
+                    var a = arr[i].split('=');
+
+                    // set parameter name and value (use 'true' if empty)
+                    var paramName = a[0];
+                    var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+                    // (optional) keep case consistent
+                    paramName = paramName.toLowerCase();
+                    if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+                    // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+                    if (paramName.match(/\[(\d+)?\]$/)) {
+
+                        // create key if it doesn't exist
+                        var key = paramName.replace(/\[(\d+)?\]/, '');
+                        if (!obj[key]) obj[key] = [];
+
+                        // if it's an indexed array e.g. colors[2]
+                        if (paramName.match(/\[\d+\]$/)) {
+                            // get the index value and add the entry at the appropriate position
+                            var index = /\[(\d+)\]/.exec(paramName)[1];
+                            obj[key][index] = paramValue;
+                        } else {
+                            // otherwise add the value to the end of the array
+                            obj[key].push(paramValue);
+                        }
+                    } else {
+                        // we're dealing with a string
+                        if (!obj[paramName]) {
+                            // if it doesn't exist, create property
+                            obj[paramName] = paramValue;
+                        } else if (obj[paramName] && typeof obj[paramName] === 'string') {
+                            // if property does exist and it's a string, convert it to an array
+                            obj[paramName] = [obj[paramName]];
+                            obj[paramName].push(paramValue);
+                        } else {
+                            // otherwise add the property
+                            obj[paramName].push(paramValue);
+                        }
+                    }
+                }
+            }
+
+            return obj;
+        }
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+
         var radBrand = document.filterBrendovi.filterBrandRadios;
         for (var i = 0; i < radBrand.length; i++) {
             radBrand[i].onclick = function () {
-                console.log(this.value)
-                
+                var pol = getAllUrlParams().pol
+                if(pol == undefined)
+                    pol = null
+                else
+                    pol = capitalizeFirstLetter(pol)
+                var tip = getAllUrlParams().tip
+                if (tip == undefined)
+                    tip = null
+                else
+                    tip = capitalizeFirstLetter(tip)
+                var cijena = getAllUrlParams().cijena
+                if (cijena == undefined)
+                    cijena = null
+                const url = "/Proizvod/MeniView?tip=" + tip + "&pol=" + pol + "&brend=" + this.value + "&cijena=" + cijena;
+
+                console.log(url);
+
+                const response = fetch(url);
+
+                window.location.href = url;
+
             };
         }
 
         var radPrices = document.filterPrices.filterPriceRadios;
         for (var i = 0; i < radPrices.length; i++) {
             radPrices[i].onclick = function () {
-                console.log(this.value)
+                var pol = getAllUrlParams().pol
+                if (pol == undefined)
+                    pol = null
+                else
+                    pol = capitalizeFirstLetter(pol)
+                var tip = getAllUrlParams().tip
+                if (tip == undefined)
+                    tip = null
+                else
+                    tip = capitalizeFirstLetter(tip)
+                var brend = getAllUrlParams().brend
+                if (brend == undefined)
+                    brend = null
+                const url = "/Proizvod/MeniView?tip=" + tip + "&pol=" + pol + "&brend=" + brend + "&cijena=" + this.value;
+
+                console.log(url);
+
+                const response = fetch(url);
+                window.location.href = url;
+
+                
 
             };
         }

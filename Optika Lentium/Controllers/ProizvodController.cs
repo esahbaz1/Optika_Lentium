@@ -23,16 +23,11 @@ namespace Optika_Lentium.Controllers
         }
 
         [HttpGet]
-        public IActionResult MeniView(string tip, string pol)
+        public IActionResult MeniView(string tip, string pol, string brend,string cijena)
         {
-            if (pol == null || pol == "")
-            {
-                _proizvodService.FilterProductsByTip(tip);
-            }
-            else
-            {
-                _proizvodService.FilterProductsByPol(tip, pol);
-            }
+            _proizvodService.FilterProducts(tip, pol, brend, cijena);
+            _logger.LogInformation(tip +pol+brend+cijena);
+            _logger.LogInformation(_proizvodService.GetFilteredProducts().Count.ToString());  
             return View();
         }
 

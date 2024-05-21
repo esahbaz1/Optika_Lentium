@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y5nq/WVrpRQZXeamdPHCwBMRLkI5qQ1v7SuNKOPVUsGsnuW5h1lyzCYPkoJqbOgTqjd2zmbTNFuJg1qP/v5MkQ==",
+  "dgSpecHash": "aVeDM1U4FoOlzd5wkoi4aRctKEBvoxGDAoF4BLe0a5XyQYA6sfWg6JPwWKyOtL1etTDh0DDhT9pBzsmEHsSOcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nadja\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
+  "projectFilePath": "C:\\Users\\Nadja\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nadja\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Nadja\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
