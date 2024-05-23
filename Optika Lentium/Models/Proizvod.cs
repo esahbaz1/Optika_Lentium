@@ -18,12 +18,13 @@ namespace Optika_Lentium.Models
     }
     public class Proizvod
     {
+        [Key]
         public int proizvodId { get; set; }
         public string nazivProizvod { get; set; }
         public double cijena { get; set; }
         public string slikaURL { get; set; }
-        public Kategorija kategorija { get; set; }
-        public Tip tip { get; set; }
+        public string? kategorija { get; set; }
+        public string? tip { get; set; }
 
         public Proizvod() { }
 
@@ -33,8 +34,8 @@ namespace Optika_Lentium.Models
             this.nazivProizvod = nazivProizvod;
             this.cijena = cijena;
             this.slikaURL = slikaURL;
-            this.kategorija = kategorija;
-            this.tip = tip;
+            this.kategorija = kategorija.ToString();
+            this.tip = tip.ToString();
         }
     }
 }

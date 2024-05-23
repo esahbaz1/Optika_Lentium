@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
+using Optika_Lentium.Data;
 using Optika_Lentium.Models;
 using System.Drawing;
 
@@ -8,12 +9,14 @@ namespace Optika_Lentium.Patterns
 {
     public class ProizvodService : IProizvod
     {
+        private readonly ApplicationDbContext _context;
         private List<Proizvod> sviProizvodi = new List<Proizvod>();
         private List<Proizvod> filteredProizvodi = new List<Proizvod>();
 
-        public ProizvodService()
+        public ProizvodService(ApplicationDbContext context)
         {
-            sviProizvodi = SeedProductList();
+            _context = context;
+            sviProizvodi = _context.Proizvod.ToList();
             filteredProizvodi = sviProizvodi.ToList();
         }
 
@@ -38,7 +41,7 @@ namespace Optika_Lentium.Patterns
 
             foreach (Proizvod p in sviProizvodi)
             {
-                if (p.tip.ToString() == tip)
+                if (p.tip != null && p.tip.ToString() == tip)
                 {
                     filteredProizvodi.Add(p);
                 }
@@ -49,7 +52,7 @@ namespace Optika_Lentium.Patterns
                 polFilter = true;
                 foreach (Proizvod p in filteredProizvodi)
                 {
-                    if (p.kategorija.ToString() == pol)
+                    if (p.kategorija != null && p.kategorija.ToString() == pol)
                     {
                         filteredProizvodi1.Add(p);
                     }
@@ -63,7 +66,7 @@ namespace Optika_Lentium.Patterns
                 {
                     foreach (Proizvod p in filteredProizvodi1)
                     {
-                        if (p.nazivProizvod.ToString() == brend)
+                        if (p.nazivProizvod.ToString().ToLower() == brend.ToLower())
                         {
                             filteredProizvodi2.Add(p);
                         }
@@ -72,7 +75,7 @@ namespace Optika_Lentium.Patterns
                 {
                     foreach (Proizvod p in filteredProizvodi)
                     {
-                        if (p.nazivProizvod.ToString() == brend)
+                        if (p.nazivProizvod.ToString().ToLower() == brend.ToLower())
                         {
                             filteredProizvodi2.Add(p);
                         }
@@ -160,7 +163,7 @@ namespace Optika_Lentium.Patterns
             }
         }
 
-        
+        /*
         private List<Proizvod> SeedProductList()
         {
             List<Proizvod> proizvodi = new List<Proizvod>();
@@ -196,7 +199,7 @@ namespace Optika_Lentium.Patterns
 
 
             return proizvodi.ToList();
-        }
+        }*/
 
     }
 }

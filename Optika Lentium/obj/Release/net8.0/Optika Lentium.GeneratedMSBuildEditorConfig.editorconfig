@@ -17,13 +17,13 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Optika_Lentium
 build_property.RootNamespace = Optika_Lentium
-build_property.ProjectDir = C:\Users\Nadja\Source\Repos\grupa5-tim34-Optika-Lentium\Optika Lentium\
+build_property.ProjectDir = C:\Users\Nadja\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Nadja\Source\Repos\grupa5-tim34-Optika-Lentium\Optika Lentium
+build_property.MSBuildProjectDirectory = C:\Users\Nadja\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Nadja/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/AccessDenied.cshtml]
