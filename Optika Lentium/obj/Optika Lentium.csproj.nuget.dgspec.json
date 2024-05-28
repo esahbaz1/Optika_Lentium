@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj": {}
+    "C:\\Users\\esmak\\Source\\Repos\\OOAD-2023-2024\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj": {
+    "C:\\Users\\esmak\\Source\\Repos\\OOAD-2023-2024\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
+        "projectUniqueName": "C:\\Users\\esmak\\Source\\Repos\\OOAD-2023-2024\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
         "projectName": "Optika Lentium",
-        "projectPath": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
-        "packagesPath": "C:\\Users\\emina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emina\\Source\\Repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\obj\\",
+        "projectPath": "C:\\Users\\esmak\\Source\\Repos\\OOAD-2023-2024\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Optika Lentium.csproj",
+        "packagesPath": "C:\\Users\\esmak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\esmak\\Source\\Repos\\OOAD-2023-2024\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\esmak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

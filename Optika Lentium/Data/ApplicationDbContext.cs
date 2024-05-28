@@ -4,7 +4,7 @@ using Optika_Lentium.Models;
 
 namespace Optika_Lentium.Data
 {
-	public class ApplicationDbContext : IdentityDbContext
+	public class ApplicationDbContext : IdentityDbContext<Korisnik>
 	{
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
 			: base(options)

@@ -18,7 +18,7 @@ namespace Optika_Lentium.Models
 		     
         public string sifra { get; set; }
         
-        public Korisnik() { }   
+        //public Korisnik() { }   
        
     }
 }
