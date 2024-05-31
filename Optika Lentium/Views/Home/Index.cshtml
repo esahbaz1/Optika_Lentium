@@ -1,6 +1,6 @@
 ﻿﻿@{
     ViewData["Title"] = "Pocetna strana";
-    Layout = "_Layout";
+    Layout = null;
 }
 
 @using Optika_Lentium.Models
@@ -30,7 +30,7 @@
                     </div>
                 </li>
                 <li><a class="btn" asp-area="Identity" asp-page="/Account/Register">Sign up</a></li>
-                <li><a class="btn" asp-area="" asp-controller="Home" asp-action="LoginView">Log in</a></li>
+                <li><a class="btn" asp-area="Identity" asp-page="/Account/Login">Log in</a></li>
             </ul>
         </div>
         <div class="title">

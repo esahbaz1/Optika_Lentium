@@ -17,7 +17,7 @@ namespace Optika_Lentium.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.2")
+                .HasAnnotation("ProductVersion", "8.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -474,8 +474,8 @@ namespace Optika_Lentium.Data.Migrations
                     b.Property<double>("cijena")
                         .HasColumnType("float");
 
-                    b.Property<int>("kategorija")
-                        .HasColumnType("int");
+                    b.Property<string>("kategorija")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nazivProizvod")
                         .IsRequired()
@@ -485,8 +485,8 @@ namespace Optika_Lentium.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("tip")
-                        .HasColumnType("int");
+                    b.Property<string>("tip")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("proizvodId");
 
@@ -551,14 +551,31 @@ namespace Optika_Lentium.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("pregledId"));
 
-                    b.Property<DateTime>("datum")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("brojTelefona")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("danPregleda")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("imePrezime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("korisnikId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("potvrdaZakazivanja")
+                    b.Property<string>("nacinKontakta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("vrijemePregleda")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

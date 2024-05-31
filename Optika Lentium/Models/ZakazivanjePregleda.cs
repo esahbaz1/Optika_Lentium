@@ -6,12 +6,16 @@ namespace Optika_Lentium.Models
 {
     public class ZakazivanjePregleda
     {
-        [Key]
-        public int pregledId {  get; set; } 
-        public Korisnik korisnik { get; set; }  
-        public DateTime datum { get; set; } 
-        public string potvrdaZakazivanja {  get; set; } 
-        public ZakazivanjePregleda() { }    
+       [Key]
+        public int pregledId {  get; set; }
+        public Korisnik korisnik { get; set; }
+        public string imePrezime { get; set; }  
+        public string email { get; set; } 
+        public string brojTelefona {  get; set; } 
+        public string nacinKontakta { get; set; }   
+        public string danPregleda { get; set; } 
+        public string vrijemePregleda { get; set; }
+        public ZakazivanjePregleda() { }
 
     }
 }

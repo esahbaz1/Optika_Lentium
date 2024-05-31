@@ -17,183 +17,183 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Optika_Lentium
 build_property.RootNamespace = Optika_Lentium
-build_property.ProjectDir = C:\Users\esmak\Source\Repos\OOAD-2023-2024\grupa5-tim34-Optika-Lentium\Optika Lentium\
+build_property.ProjectDir = C:\Users\emina\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\esmak\Source\Repos\OOAD-2023-2024\grupa5-tim34-Optika-Lentium\Optika Lentium
+build_property.MSBuildProjectDirectory = C:\Users\emina\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/Index.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/KontaktView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/KontaktView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLb250YWt0Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/LoginView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/LokacijaView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/LokacijaView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2thY2lqYVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/Privacy.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/SignupView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/SignupView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWdudXBWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/ZakPregledaView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/ZakPregledaView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxaYWtQcmVnbGVkYVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/HomeView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/HomeView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFcSG9tZVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/Index.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/KorpaView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/KorpaView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFcS29ycGFWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/LoginView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFcTG9naW5WaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/MeniView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/MeniView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFcTWVuaVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/Placanje.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Narudzba/Placanje.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFydWR6YmFcUGxhY2FuamUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/Index.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/KontaktView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/KontaktView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcS29udGFrdFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/KorpaView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/KorpaView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcS29ycGFWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/LoginView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcTG9naW5WaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/MeniView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/MeniView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcTWVuaVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/Placanje.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/Placanje.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcUGxhY2FuamUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/PregledProView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/PregledProView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcUHJlZ2xlZFByb1ZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/SignupView.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Proizvod/SignupView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvaXp2b2RcU2lnbnVwVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/Error.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakPregleda/Index.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakPregleda/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrUHJlZ2xlZGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/_ViewImports.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/_ViewStart.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/esmak/Source/Repos/OOAD-2023-2024/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_Layout.cshtml]
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6enlsxlb66

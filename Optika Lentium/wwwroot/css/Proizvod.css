@@ -17,7 +17,13 @@ body {
     height: 500px;
     width: 800px;
 }
-
+.container {
+    margin-top: 50px;
+    font-family: "Times New Roman", Times, serif; /* Example of a serif italic font */
+    font-style: italic;
+    font-size: 25px;
+    margin-left: 10px;
+}
 
 
 /* 	Product details  */
