@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Optika Lentium")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b371e9f33233062f3680e3d5160d8d6c4c526ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e47795450ff96de590b32b39d97d279d30c2680")]
 [assembly: System.Reflection.AssemblyProductAttribute("Optika Lentium")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Optika Lentium")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

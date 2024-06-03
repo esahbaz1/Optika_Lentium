@@ -2,11 +2,13 @@
 
 @{
     ViewData["Title"] = "Edit";
+    Layout = "_Layout";
 }
+
 
 <h1>Edit</h1>
 
-<h4>ZakazivanjePregleda</h4>
+<h4>Zakazivanje pregleda</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,32 +16,32 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="pregledId" />
             <div class="form-group">
-                <label asp-for="imePrezime" class="control-label"></label>
+                <label asp-for="imePrezime" class="control-label">Ime i prezime</label>
                 <input asp-for="imePrezime" class="form-control" />
                 <span asp-validation-for="imePrezime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="email" class="control-label"></label>
+                <label asp-for="email" class="control-label">Email</label>
                 <input asp-for="email" class="form-control" />
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="brojTelefona" class="control-label"></label>
+                <label asp-for="brojTelefona" class="control-label">Broj telefona</label>
                 <input asp-for="brojTelefona" class="form-control" />
                 <span asp-validation-for="brojTelefona" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="nacinKontakta" class="control-label"></label>
+                <label asp-for="nacinKontakta" class="control-label">Nacin kontakta</label>
                 <input asp-for="nacinKontakta" class="form-control" />
                 <span asp-validation-for="nacinKontakta" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="danPregleda" class="control-label"></label>
+                <label asp-for="danPregleda" class="control-label">Dan pregleda</label>
                 <input asp-for="danPregleda" class="form-control" />
                 <span asp-validation-for="danPregleda" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="vrijemePregleda" class="control-label"></label>
+                <label asp-for="vrijemePregleda" class="control-label">Vrijeme pregleda</label>
                 <input asp-for="vrijemePregleda" class="form-control" />
                 <span asp-validation-for="vrijemePregleda" class="text-danger"></span>
             </div>
@@ -51,9 +53,11 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Vrati se na listu</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

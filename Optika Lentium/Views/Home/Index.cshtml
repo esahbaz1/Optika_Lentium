@@ -31,7 +31,7 @@
                         <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Naocale">Sunčane naočale</a>
                         <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Lece">Leće i otopine</a>
                         <a class="btn" asp-area="" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Asesoari">Asesoari</a>
-                        <a class="btn" asp-area="" asp-controller="Home" asp-action="ZakPregledaView">Zakaži pregled</a>
+                        <a class="btn" asp-area="" asp-controller="ZakazivanjePregleda" asp-action="Index">Zakaži pregled</a>
                     </div>
                 </li>
                 @if (SignInManager.IsSignedIn(User))

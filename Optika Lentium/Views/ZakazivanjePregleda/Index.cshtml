@@ -1,65 +1,99 @@
 ﻿@model IEnumerable<Optika_Lentium.Models.ZakazivanjePregleda>
 
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Zakažite pregled";
+    Layout = null;
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/pregled.css">
+    <title>Zakažite pregled</title>
+</head>
+<body>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.imePrezime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.brojTelefona)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nacinKontakta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.danPregleda)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.vrijemePregleda)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.imePrezime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.brojTelefona)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nacinKontakta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.danPregleda)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.vrijemePregleda)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.pregledId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.pregledId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.pregledId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <center><h2>Zakazivanje pregleda</h2></center>
+    <div>
+        <div>
+            <div class="container">
+                <form method="post" asp-action="Create">
+
+                    <div>
+                        <div>
+                            <br>
+                            <label for="fname"></label>
+                            <input type="text" id="fname" name="imePrezime" placeholder="Ime i prezime" required>
+
+                            <label for="email"></label>
+                            <input type="text" id="email" name="email" placeholder="Email" required>
+
+                            <label for="phone"></label>
+                            <input type="text" id="phone" name="brojTelefona" placeholder="Broj telefona" required>
+
+
+
+                        </div>
+                        <div>
+
+                            <label><b>Kako Vas možemo kontaktirati?</b></label><br>
+                            <input type="radio" id=" Telefonski poziv" name="nacinKontakta" value="Telefonski poziv" style="margin-left:13px;">&nbspTelefonski poziv<label for="Telefonski poziv"></label><br>
+                            <input type="radio" id="Email" name="nacinKontakta" value="Email" style="margin-left:13px;">&nbspEmail<label for="Email"></label><br><br>
+                            <label><b>Odaberite dan pregleda:</b></label><br>
+                            <input type="checkbox" id="day1" name="danPregleda" value="Ponedjeljak">
+                            <label for="day1">Ponedjeljak</label><br>
+                            <input type="checkbox" id="day2" name="danPregleda" value="Utorak">
+                            <label for="day2">Utorak</label><br>
+                            <input type="checkbox" id="day3" name="danPregleda" value="Srijeda">
+                            <label for="day3">Srijeda</label><br>
+                            <input type="checkbox" id="day4" name="danPregleda" value="Četvrtak">
+                            <label for="day4">Četvrtak</label><br>
+                            <input type="checkbox" id="day5" name="danPregleda" value="Petak">
+                            <label for="day5">Petak</label><br><br>
+                            <label><b>Odaberite vrijeme pregleda:</b></label><br>
+                            <input type="checkbox" id="shift1" name="vrijemePregleda" value="Jutro">
+                            <label for="shift1">Jutro</label><br>
+                            <input type="checkbox" id="shift2" name="vrijemePregleda" value="Podne">
+                            <label for="shift2">Podne</label><br>
+                        </div>
+                        <input type="submit" value="Pošaljite zahtjev" class="btn">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Ime i prezime</th>
+                                    <th>Email</th>
+                                    <th>Broj telefona</th>
+                                    <th>Nacin kontakta</th>
+                                    <th>Dan pregleda</th>
+                                    <th>Vrijeme pregleda</th>
+                                    <th>Akcije</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.imePrezime)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.email)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.brojTelefona)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.nacinKontakta)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.danPregleda)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.vrijemePregleda)</td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.pregledId">Edit</a> |
+                                            <a asp-action="Details" asp-route-id="@item.pregledId">Details</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.pregledId">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
