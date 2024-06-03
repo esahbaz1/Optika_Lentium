@@ -23,7 +23,8 @@ namespace Optika_Lentium.Data
 		public DbSet<ZakazivanjePregleda> ZakazivanjePregleda { get; set; }
 
 		public DbSet<NoviKorisnik> NoviKorisnik { get; set; }
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Lokacija>().ToTable("Lokacija");
 			modelBuilder.Entity<LokacijaKorisnik>().ToTable("LokacijaKorisnik");

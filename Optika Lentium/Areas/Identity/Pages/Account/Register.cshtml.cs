@@ -16,8 +16,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.Extensions.Logging;
+using Optika_Lentium.Data;
 using Optika_Lentium.Models;
 
 namespace Optika_Lentium.Areas.Identity.Pages.Account
@@ -30,13 +33,15 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<Korisnik> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private ApplicationDbContext context;
 
         public RegisterModel(
             UserManager<Korisnik> userManager,
             IUserStore<Korisnik> userStore,
             SignInManager<Korisnik> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ApplicationDbContext c)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +49,7 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            context = c;
         }
 
         /// <summary>
@@ -75,7 +81,14 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            /// [Required]
             [Required]
+            [Display(Name = "Ime")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "Prezime")]
+            public string LastName { get; set; }
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -94,10 +107,7 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-            public string ConfirmPassword { get; set; }
+
         }
 
 
@@ -107,7 +117,7 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(int userIdProvider, string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -117,11 +127,18 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
+                // Set FirstName and LastName
+                user.ime = Input.FirstName;
+                user.prezime = Input.LastName;
+                user.sifra = Input.Password;
 
+                int maxKorisnikId = context.NoviKorisnik.Max(u => (int?)u.korisnikId) ?? 1;
+                user.korisnikId = maxKorisnikId + 1;
+
+                var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
+                    _logger.LogInformation("User First Name: {FirstName}, Last Name: {LastName}", user.ime, user.prezime);
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -137,7 +154,7 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        return RedirectToPage("/Home/Index", new { email = Input.Email, returnUrl = returnUrl });
                     }
                     else
                     {

@@ -1,0 +1,54 @@
+﻿@model Optika_Lentium.Models.ZakazivanjePregleda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ZakazivanjePregleda</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.imePrezime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.imePrezime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.brojTelefona)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.brojTelefona)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nacinKontakta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nacinKontakta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.danPregleda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.danPregleda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.vrijemePregleda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.vrijemePregleda)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.pregledId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

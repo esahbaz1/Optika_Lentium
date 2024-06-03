@@ -10,24 +10,30 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Optika_Lentium.Models;
 using Optika_Lentium.Patterns;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace Optika_Lentium.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly UserManager<Korisnik> _userManager;
         private readonly IProizvod _proizvodService;
 
-        public HomeController(ILogger<HomeController> logger, IProizvod p)
+        public HomeController(UserManager<Korisnik> userManager, IProizvod p)
         {
-            _logger = logger;
+            _userManager = userManager;
             _proizvodService = p;
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var user = await _userManager.GetUserAsync(User);
+            if (user != null)
+            {
+                ViewData["UserName"] = $"{user.ime} {user.prezime}";
+            }
             return View();
         }
 

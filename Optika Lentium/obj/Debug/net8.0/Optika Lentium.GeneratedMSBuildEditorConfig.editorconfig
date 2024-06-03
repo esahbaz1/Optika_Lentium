@@ -26,16 +26,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\emina\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/AccessDenied.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Login.cshtml]
@@ -46,12 +38,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
+[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
@@ -180,6 +168,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emina/Source/Repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakPregleda/Index.cshtml]

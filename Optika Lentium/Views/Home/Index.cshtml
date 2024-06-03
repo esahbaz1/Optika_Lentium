@@ -1,6 +1,11 @@
-﻿﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Korisnik> SignInManager
+@inject UserManager<Korisnik> UserManager
+
+@{
     ViewData["Title"] = "Pocetna strana";
     Layout = null;
+    
 }
 
 @using Optika_Lentium.Models
@@ -29,8 +34,20 @@
                         <a class="btn" asp-area="" asp-controller="Home" asp-action="ZakPregledaView">Zakaži pregled</a>
                     </div>
                 </li>
-                <li><a class="btn" asp-area="Identity" asp-page="/Account/Register">Sign up</a></li>
-                <li><a class="btn" asp-area="Identity" asp-page="/Account/Login">Log in</a></li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li>
+                        <span class="username">
+                            Hello, @ViewData["UserName"]!
+                        </span>
+                        <a class="btn" asp-area="Identity" asp-page="/Account/Logout">Log out</a>
+                    </li>
+                }
+                else
+                {
+                    <li><a class="btn" asp-area="Identity" asp-page="/Account/Register">Sign up</a></li>
+                    <li><a class="btn" asp-area="Identity" asp-page="/Account/Login">Log in</a></li>
+                }
             </ul>
         </div>
         <div class="title">
