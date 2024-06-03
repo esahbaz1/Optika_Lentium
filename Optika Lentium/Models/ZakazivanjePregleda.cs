@@ -8,7 +8,6 @@ namespace Optika_Lentium.Models
     {
        [Key]
         public int pregledId {  get; set; }
-        public Korisnik korisnik { get; set; }
         public string imePrezime { get; set; }  
         public string email { get; set; } 
         public string brojTelefona {  get; set; } 
