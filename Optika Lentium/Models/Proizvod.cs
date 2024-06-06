@@ -1,4 +1,5 @@
 ﻿using Optika_Lentium.Models;
+using Optika_Lentium.Patterns;
 using System.ComponentModel.DataAnnotations;
 
 namespace Optika_Lentium.Models
@@ -16,7 +17,7 @@ namespace Optika_Lentium.Models
         Lece,
         Asesoari
     }
-    public class Proizvod
+    public class Proizvod : IPrototip<Proizvod>
     {
         [Key]
         public int proizvodId { get; set; }
@@ -36,6 +37,18 @@ namespace Optika_Lentium.Models
             this.slikaURL = slikaURL;
             this.kategorija = kategorija.ToString();
             this.tip = tip.ToString();
+        }
+        public Proizvod Kloniraj()
+        {
+            return new Proizvod
+            {
+                proizvodId = this.proizvodId,
+                nazivProizvod = this.nazivProizvod,
+                cijena = this.cijena,
+                slikaURL = this.slikaURL,
+                kategorija = this.kategorija,
+                tip = this.tip
+            };
         }
     }
 }

@@ -162,7 +162,11 @@ namespace Optika_Lentium.Patterns
                 filteredProizvodi = filteredProizvodi3.ToList();
             }
         }
-
+        public void dodajProizvod(Proizvod proizvod)
+        {
+            _context.Proizvod.Add(proizvod);
+            _context.SaveChanges();
+        }
         /*
         private List<Proizvod> SeedProductList()
         {

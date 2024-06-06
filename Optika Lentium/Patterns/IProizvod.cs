@@ -8,5 +8,7 @@ namespace Optika_Lentium.Patterns
         public void FilterProducts(string tip, string pol,string brend, string cijena);
         public List<Proizvod> GetFilteredProducts();
 
+        void dodajProizvod(Proizvod proizvod);
     }
+  
 }
