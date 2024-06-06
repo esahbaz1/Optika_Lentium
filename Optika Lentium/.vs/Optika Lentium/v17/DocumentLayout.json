@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\models\\proizvod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:models\\proizvod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\opadajuciporedakcijena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\opadajuciporedakcijena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\proizvodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\proizvodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\rastuciporedakcijena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\rastuciporedakcijena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\iproizvod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\iproizvod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\isort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\isort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\iprototip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\iprototip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\ikorisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\ikorisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\proizvodsorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\proizvodsorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\controllers\\proizvodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:controllers\\proizvodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\proizvodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\proizvodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\narudzbaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\narudzbaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\patterns\\iprototip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\iprototip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\elved\\source\\repos\\grupa5-tim34-optika-lentium\\projekat2\\optika lentium\\models\\proizvod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:models\\proizvod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +82,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProizvodSorter.cs",
+              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\ProizvodSorter.cs",
+              "RelativeDocumentMoniker": "Patterns\\ProizvodSorter.cs",
+              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\ProizvodSorter.cs",
+              "RelativeToolTip": "Patterns\\ProizvodSorter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:25:46.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OpadajuciPoredakCijena.cs",
+              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\OpadajuciPoredakCijena.cs",
+              "RelativeDocumentMoniker": "Patterns\\OpadajuciPoredakCijena.cs",
+              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\OpadajuciPoredakCijena.cs",
+              "RelativeToolTip": "Patterns\\OpadajuciPoredakCijena.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:23:01.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISort.cs",
+              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\ISort.cs",
+              "RelativeDocumentMoniker": "Patterns\\ISort.cs",
+              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\ISort.cs",
+              "RelativeToolTip": "Patterns\\ISort.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:20:49.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RastuciPoredakCijena.cs",
+              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\RastuciPoredakCijena.cs",
+              "RelativeDocumentMoniker": "Patterns\\RastuciPoredakCijena.cs",
+              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\RastuciPoredakCijena.cs",
+              "RelativeToolTip": "Patterns\\RastuciPoredakCijena.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:18:08.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProizvodController.cs",
+              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Controllers\\ProizvodController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProizvodController.cs",
+              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Controllers\\ProizvodController.cs",
+              "RelativeToolTip": "Controllers\\ProizvodController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T16:59:04.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ProizvodService.cs",
               "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\ProizvodService.cs",
               "RelativeDocumentMoniker": "Patterns\\ProizvodService.cs",
@@ -83,32 +156,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAKQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T16:39:08.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProizvod.cs",
-              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\IProizvod.cs",
-              "RelativeDocumentMoniker": "Patterns\\IProizvod.cs",
-              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\IProizvod.cs",
-              "RelativeToolTip": "Patterns\\IProizvod.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T16:37:53.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProizvodController.cs",
-              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Controllers\\ProizvodController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProizvodController.cs",
-              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Controllers\\ProizvodController.cs",
-              "RelativeToolTip": "Controllers\\ProizvodController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T16:35:30.496Z",
               "EditorCaption": ""
             },
             {
@@ -126,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Proizvod.cs",
               "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Models\\Proizvod.cs",
               "RelativeDocumentMoniker": "Models\\Proizvod.cs",
@@ -139,20 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IKorisnik.cs",
-              "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\IKorisnik.cs",
-              "RelativeDocumentMoniker": "Patterns\\IKorisnik.cs",
-              "ToolTip": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\IKorisnik.cs",
-              "RelativeToolTip": "Patterns\\IKorisnik.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T16:23:41.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "IPrototip.cs",
               "DocumentMoniker": "C:\\Users\\elved\\source\\repos\\grupa5-tim34-Optika-Lentium\\Projekat2\\Optika Lentium\\Patterns\\IPrototip.cs",
               "RelativeDocumentMoniker": "Patterns\\IPrototip.cs",
