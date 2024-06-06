@@ -1,20 +1,33 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<Korisnik> SignInManager
-@inject UserManager<Korisnik> UserManager
+﻿
 
 @{
     ViewData["Title"] = "Pocetna strana";
     Layout = null;
+    var user = await UserManager.GetUserAsync(User);
+    var userName = user != null ? $"{user.ime} {user.prezime}" : "";
     
 }
 
 @using Optika_Lentium.Models
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Korisnik> SignInManager
+@inject UserManager<Korisnik> UserManager
 <!DOCTYPE html>
 <html>
 <head>
     <title>Optika Lentium</title>
     <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <style>
+        .username {
+            font-size: 19px;
+            font-weight: bold;
+            color: #8B4513;
+            top: 6%;
+            left: 8%;
+           
+            
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -37,9 +50,9 @@
                 @if (SignInManager.IsSignedIn(User))
                 {
                     <li>
-                        <span class="username">
-                            Hello, @ViewData["UserName"]!
-                        </span>
+                        <a class="username" asp-controller="Home" asp-action="KorisnikFormaView">
+                            @userName
+                        </a>
                         <a class="btn" asp-area="Identity" asp-page="/Account/Logout">Log out</a>
                     </li>
                 }

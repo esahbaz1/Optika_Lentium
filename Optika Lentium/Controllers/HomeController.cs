@@ -41,6 +41,10 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
+        public IActionResult KorisnikFormaView()
+        {
+            return View();
+        }
         public IActionResult LoginView()
         {
             return View();
