@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:views\\proizvod\\uspjesnoplacanje.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\error.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:wwwroot\\css\\error.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\wwwroot\\css\\errora.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:wwwroot\\css\\errora.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\views\\proizvod\\placanje.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -86,28 +86,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Neuspjesnoplacanje.cshtml",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\Neuspjesnoplacanje.cshtml",
-              "RelativeDocumentMoniker": "Views\\Proizvod\\Neuspjesnoplacanje.cshtml",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\Neuspjesnoplacanje.cshtml",
-              "RelativeToolTip": "Views\\Proizvod\\Neuspjesnoplacanje.cshtml",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAwBMAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-07T08:10:30.265Z",
+              "DocumentIndex": 3,
+              "Title": "errora.css",
+              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\errora.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\errora.css",
+              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\errora.css",
+              "RelativeToolTip": "wwwroot\\css\\errora.css",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAswHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-07T08:22:58.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "error.css",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\error.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\error.css",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\error.css",
-              "RelativeToolTip": "wwwroot\\css\\error.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-07T08:07:46.026Z"
+              "DocumentIndex": 1,
+              "Title": "Neuspjesnoplacanje.cshtml",
+              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\Neuspjesnoplacanje.cshtml",
+              "RelativeDocumentMoniker": "Views\\Proizvod\\Neuspjesnoplacanje.cshtml",
+              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\Neuspjesnoplacanje.cshtml*",
+              "RelativeToolTip": "Views\\Proizvod\\Neuspjesnoplacanje.cshtml*",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwBMAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-07T08:10:30.265Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,9 +116,9 @@
               "Title": "Neuspjesnoplacanje.cshtml",
               "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Narudzba\\Neuspjesnoplacanje.cshtml",
               "RelativeDocumentMoniker": "Views\\Narudzba\\Neuspjesnoplacanje.cshtml",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Narudzba\\Neuspjesnoplacanje.cshtml",
-              "RelativeToolTip": "Views\\Narudzba\\Neuspjesnoplacanje.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAApAAAA",
+              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Narudzba\\Neuspjesnoplacanje.cshtml*",
+              "RelativeToolTip": "Views\\Narudzba\\Neuspjesnoplacanje.cshtml*",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBMAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-07T07:45:52.372Z",
               "EditorCaption": ""
@@ -130,9 +131,10 @@
               "RelativeDocumentMoniker": "Views\\Proizvod\\Uspjesnoplacanje.cshtml",
               "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\Uspjesnoplacanje.cshtml",
               "RelativeToolTip": "Views\\Proizvod\\Uspjesnoplacanje.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADAAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAwCgAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-07T07:44:29.893Z"
+              "WhenOpened": "2024-06-07T07:44:29.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
