@@ -60,8 +60,15 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
-
-        public IActionResult Placanje()
+		public IActionResult Uspjesnoplacanje()
+		{
+			return View();
+		}
+		public IActionResult Neuspjesnoplacanje()
+		{
+			return View();
+		}
+		public IActionResult Placanje()
         {
             return View();
         }

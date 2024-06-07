@@ -9,10 +9,39 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="/css/placanje.css">
+	<script>
+		function validateAndRedirect() {
+			const nameField = document.querySelector('input[placeholder="Unesite svoje puno ime i prezime"]');
+			const cardNumberField = document.querySelector('input[placeholder="0000 0000 0000 0000"]');
+			const expiryField = document.querySelector('input[placeholder="01/24"]');
+			const cvvField = document.querySelector('input[placeholder="CVV"]');
+
+			const name = nameField.value.trim();
+			const cardNumber = cardNumberField.value.trim();
+			const expiry = expiryField.value.trim();
+			const cvv = cvvField.value.trim();
+
+			const nameRegex = /^[a-zA-Z\s]+$/;
+			const cardNumberRegex = /^\d{16}$/;
+			const expiryRegex = /^(0[1-9]|1[0-2])\/(2[4-9]|[3-9][0-9])$/;
+			const cvvRegex = /^\d{3,4}$/;
+
+			if (
+				nameRegex.test(name) &&
+				cardNumberRegex.test(cardNumber) &&
+				expiryRegex.test(expiry) &&
+				cvvRegex.test(cvv)
+			) {
+				window.location.href = '/Proizvod/Uspjesnoplacanje';
+			} else {
+				window.location.href = '/Proizvod/Neuspjesnoplacanje';
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="modal">
-		<form class="form">
+		<form class="form" onsubmit="event.preventDefault(); validateAndRedirect();">
 			<div class="paymentother">
 				<button name="apple-pay" type="button">
 					<svg xml:space="preserve" viewBox="0 0 512 210.2" y="0px" x="0px" id="Layer_1" version="1.1"
@@ -76,7 +105,7 @@
 					</div>
 				</div>
 			</div>
-			<button class="checkout" style="cursor: pointer;">
+			<button class="checkout" type="submit" style="cursor: pointer;">
 				<span>Plati</span>
 			</button>
 		</form>

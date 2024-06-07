@@ -2,13 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Optika Lentium",
-    "\\Optika Lentium\\Areas\\Identity\\Pages",
-    "\\Optika Lentium\\Areas\\Identity\\Pages\\Account",
-    "\\Optika Lentium\\Controllers",
-    "\\Optika Lentium\\Data",
-    "\\Optika Lentium\\Models",
-    "\\Optika Lentium\\Patterns",
-    "\\Optika Lentium\\Views"
+    "\\Optika Lentium\\Views",
+    "\\Optika Lentium\\Views\\Narudzba",
+    "\\Optika Lentium\\Views\\Proizvod"
   ],
   "SelectedNode": "\\Optika Lentium\\Optika Lentium.sln",
   "PreviewInSolutionExplorer": false

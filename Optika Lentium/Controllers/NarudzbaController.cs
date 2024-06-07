@@ -26,7 +26,14 @@ namespace Optika_Lentium.Controllers
 		{
 			return View();
 		}
-
+		public IActionResult Uspjesnoplacanje()
+		{
+			return View();
+		}
+		public IActionResult Neuspjesnoplacanje()
+		{
+			return View();
+		}
 		public async Task<IActionResult> AddToCart(int id)
 		{
 			_narudzbaService.AddToCart(1, id);
