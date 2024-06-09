@@ -17,13 +17,13 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Optika_Lentium
 build_property.RootNamespace = Optika_Lentium
-build_property.ProjectDir = C:\Users\emina\Source\Repos\grupa5-tim34-Optika-Lentium\Optika Lentium\
+build_property.ProjectDir = C:\Users\emina\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\emina\Source\Repos\grupa5-tim34-Optika-Lentium\Optika Lentium
+build_property.MSBuildProjectDirectory = C:\Users\emina\source\repos\grupa5-tim34-Optika-Lentium\Optika Lentium
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
@@ -100,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/SignupView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWdudXBWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/Home/ZakPregledaView.cshtml]
@@ -208,6 +212,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakazivanjePregleda/Uspjesnozakazivanje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVQcmVnbGVkYVxVc3BqZXNub3pha2F6aXZhbmplLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emina/source/repos/grupa5-tim34-Optika-Lentium/Optika Lentium/Views/ZakPregleda/Index.cshtml]

@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Optika_Lentium.Data;
 using Optika_Lentium.Models;
 
 namespace Optika_Lentium.Areas.Identity.Pages.Account
@@ -30,13 +31,16 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<Korisnik> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext _context;
+
 
         public RegisterModel(
             UserManager<Korisnik> userManager,
             IUserStore<Korisnik> userStore,
             SignInManager<Korisnik> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +48,7 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context;
         }
 
         /// <summary>
@@ -121,7 +126,8 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
                 user.ime = Input.FirstName; user.prezime = Input.LastName; user.sifra = Input.Password;
-
+                int maxKorisnikId = _context.Users.Max(u => (int?)u.korisnikId) ?? 0;
+                user.korisnikId = maxKorisnikId + 1;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

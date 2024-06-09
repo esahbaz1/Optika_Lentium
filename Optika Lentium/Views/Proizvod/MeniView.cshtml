@@ -41,19 +41,19 @@
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://www.facebook.com/">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://x.com/?lang=en">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://ba.linkedin.com/">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://www.instagram.com/">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-dark pl-2" href="">
+                    <a class="text-dark pl-2" href="https://www.youtube.com/">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
@@ -255,7 +255,7 @@
                                 </div>
                                 <div class="card-footer d-flex justify-content-between bg-light border">
                                     <a class="btn btn-sm text-dark p-0" asp-area="" asp-controller="Proizvod" asp-action="PregledProView" asp-route-id="@p.proizvodId"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                    <a href="javascript:AddToCart(@p.proizvodId)" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
+                                    <a href="javascript:void(0);" class="btn btn-sm text-dark p-0" onclick="AddToCart(@p.proizvodId)"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
                                 </div>
                             </div>
                         </div>

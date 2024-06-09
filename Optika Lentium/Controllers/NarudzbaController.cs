@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Optika_Lentium.Models;
 using Optika_Lentium.Patterns;
@@ -6,7 +7,8 @@ using System.Security.Claims;
 
 namespace Optika_Lentium.Controllers
 {
-	public class NarudzbaController : Controller
+    
+    public class NarudzbaController : Controller
 	{
 		private readonly ILogger<NarudzbaController> _logger;
 		private readonly INarudzba _narudzbaService;
@@ -21,16 +23,18 @@ namespace Optika_Lentium.Controllers
 		{
 			return View();
 		}
-
-		public IActionResult KorpaView()
+        [Authorize]
+        public IActionResult KorpaView()
 		{
 			return View();
 		}
-		public IActionResult Uspjesnoplacanje()
+        [Authorize]
+        public IActionResult Uspjesnoplacanje()
 		{
 			return View();
 		}
-		public IActionResult Neuspjesnoplacanje()
+        [Authorize]
+        public IActionResult Neuspjesnoplacanje()
 		{
 			return View();
 		}
@@ -40,8 +44,8 @@ namespace Optika_Lentium.Controllers
 			return Json(new { message = "Radi!" });
 
 		}
-
-		public IActionResult Placanje()
+        [Authorize]
+        public IActionResult Placanje()
 		{
 			return View();
 		}

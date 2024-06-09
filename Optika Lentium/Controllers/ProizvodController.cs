@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Optika_Lentium.Data;
 using Optika_Lentium.Models;
@@ -6,6 +7,7 @@ using Optika_Lentium.Patterns;
 
 namespace Optika_Lentium.Controllers
 {
+    
     public class ProizvodController : Controller
     {
         private readonly ILogger<ProizvodController> _logger;
@@ -30,8 +32,8 @@ namespace Optika_Lentium.Controllers
             _logger.LogInformation(_proizvodService.GetFilteredProducts().Count.ToString());  
             return View();
         }
-
-		public async Task<IActionResult> PregledProView(int? id)
+        [Authorize]
+        public async Task<IActionResult> PregledProView(int? id)
 		{
 			if (id == null)
 			{
@@ -60,18 +62,22 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
-		public IActionResult Uspjesnoplacanje()
+        [Authorize]
+        public IActionResult Uspjesnoplacanje()
 		{
 			return View();
 		}
-		public IActionResult Neuspjesnoplacanje()
+        [Authorize]
+        public IActionResult Neuspjesnoplacanje()
 		{
 			return View();
 		}
-		public IActionResult Placanje()
+        [Authorize]
+        public IActionResult Placanje()
         {
             return View();
         }
+        [Authorize]
         public IActionResult KorpaView()
         {
             return View();

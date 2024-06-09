@@ -58,7 +58,8 @@
                             <input type="checkbox" id="shift2" name="vrijemePregleda" value="Podne">
                             <label for="shift2">Podne</label><br>
                         </div>
-                        <input type="submit" value="Pošaljite zahtjev" class="btn">
+                        <input type="submit"  value="Pošaljite zahtjev" class="btn">
+
                         <table class="table">
                             <thead>
                                 <tr>
@@ -75,6 +76,8 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
+                                        @if (User.IsInRole("Administrator"))
+                                        {
                                         <td>@Html.DisplayFor(modelItem => item.imePrezime)</td>
                                         <td>@Html.DisplayFor(modelItem => item.email)</td>
                                         <td>@Html.DisplayFor(modelItem => item.brojTelefona)</td>
@@ -82,10 +85,26 @@
                                         <td>@Html.DisplayFor(modelItem => item.danPregleda)</td>
                                         <td>@Html.DisplayFor(modelItem => item.vrijemePregleda)</td>
                                         <td>
-                                            <a asp-action="Edit" asp-route-id="@item.pregledId">Edit</a> |
-                                            <a asp-action="Details" asp-route-id="@item.pregledId">Details</a> |
+                                            
+                                                <a asp-action="Edit" asp-route-id="@item.pregledId">Edit</a> <nobr>|</nobr>
+                                                
+                                            <a asp-action="Details" asp-route-id="@item.pregledId">Details</a> <nobr>|</nobr>
+                                                
                                             <a asp-action="Delete" asp-route-id="@item.pregledId">Delete</a>
+                                            
+                                         
                                         </td>
+                                       }
+                                        @if (User.IsInRole("Radnik"))
+                                        {
+                                            <td>@Html.DisplayFor(modelItem => item.imePrezime)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.email)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.brojTelefona)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.nacinKontakta)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.danPregleda)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.vrijemePregleda)</td>
+                                            <td><a asp-action="Details" asp-route-id="@item.pregledId">Details</a></td>
+                                        }
                                     </tr>
                                 }
                             </tbody>

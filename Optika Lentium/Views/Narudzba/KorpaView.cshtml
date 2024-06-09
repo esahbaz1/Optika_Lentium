@@ -2,15 +2,16 @@
     ViewData["Title"] = "Korpa";
     Layout = null;
 }
-@using System.Collections.Generic
 
+@using Optika_Lentium.Patterns;
+@inject INarudzba NaruzbaService
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
+    <title>Korpa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -40,20 +41,21 @@
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://www.facebook.com/">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://x.com/?lang=en">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://ba.linkedin.com/">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a class="text-dark px-2" href="">
+                    <a class="text-dark px-2" href="https://www.instagram.com/">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-dark pl-2" href="">
+                    <a class="text-dark pl-2" href="https://www.youtube.com/watch?v=7hJHL2vfK6A">
                         <i class="fab fa-youtube"></i>
+                    </a>
                     </a>
                 </div>
             </div>
@@ -64,10 +66,6 @@
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-1 mr-0">O</span>ptika Lentium</h1>
                 </a>
             </div>
-            <div class="col-lg-6 col-6 text-left">
-
-            </div>
-            
         </div>
     </div>
     <!-- Topbar End -->
@@ -78,7 +76,9 @@
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Korpa</h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a class="btn" asp-area="" asp-controller="Narudzba" asp-action="MeniView"> Nastavi sa kupovinom</a></p>
+                <p class="m-0"><a href="">Pocetna</a></p>
+                <p class="m-0 px-2">-</p>
+                <p class="m-0">Meni</p>
             </div>
         </div>
     </div>
@@ -99,32 +99,30 @@
                     </thead>
                     <tbody class="align-middle">
                         <tr>
-                            <td class="align-middle"><img src="images/cale1.jpg" alt="" style="width: 50px;"> Naocale 1</td>
-                            <td class="align-middle">150 KM</td>
+                            <td class="align-middle"><img src="images/cale1.jpg" alt="" style="width: 50px;">proizvodId</td>
+                            <td class="align-middle">placanje.iznosPlacanja KM</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus">
+                                        <button class="btn btn-sm btn-primary btn-minus" onclick="showAlert()">
                                             <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1" readonly>
                                     <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
+                                        <button class="btn btn-sm btn-primary btn-plus" onclick="showAlert()">
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle">150 KM</td>
+                            <td class="align-middle">placanje.iznosPlacanja KM</td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
             <div class="col-lg-4">
-
                 <div class="card border-secondary mb-5">
                     <div class="card-header bg-secondary border-0">
                         <h4 class="font-weight-semi-bold m-0">Ukupno za platiti</h4>
@@ -146,7 +144,7 @@
                         </div>
                         <button class="btn btn-block btn-primary my-3 py-3">
                             <a class="btn" asp-area="" asp-controller="Narudzba" asp-action="Placanje">Nastavi sa plaćanjem </a>
-                         </button>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -170,14 +168,13 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Linkovi</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="HomeView"><i class="fa fa-angle-right mr-2"></i>Pocetna</a>
-                            <a class="text-dark mb-2" href="MeniView"><i class="fa fa-angle-right mr-2"></i>Pregled</a>
+                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Pocetna</a>
+                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Pregled</a>
                             <a class="text-dark mb-2" asp-page="/KorpaView"><i class="fa fa-angle-right mr-2"></i>Korpa</a>
-                            <a class="text-dark mb-2" href="Placanje"><i class="fa fa-angle-right mr-2"></i>Plaćanje</a>
-                            <a class="text-dark" href="LoginView"><i class="fa fa-angle-right mr-2"></i>Login</a>
+                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Plaćanje</a>
+                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Login</a>
                         </div>
                     </div>
-
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Kontaktirajte nas</h5>
                         <form action="">
@@ -225,7 +222,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+        function showAlert() {
+            alert("Nije moguće uzeti manje/više od jednog proizvoda!");
+        }
+    </script>
 </body>
-
 </html>
-
