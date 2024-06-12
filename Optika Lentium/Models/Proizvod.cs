@@ -25,7 +25,8 @@ namespace Optika_Lentium.Models
         public double cijena { get; set; }
         public string slikaURL { get; set; }
         public string? kategorija { get; set; }
-        public string? tip { get; set; }
+        public string? tip { get; set; }            
+        public int Kolicina { get; set; }   
 
         public Proizvod() { }
 

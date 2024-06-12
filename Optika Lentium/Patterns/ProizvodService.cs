@@ -24,7 +24,10 @@ namespace Optika_Lentium.Patterns
         {
             return sviProizvodi;
         }
-
+        public List<Proizvod> GetAvailableProducts()
+        {
+            return _context.Proizvod.Where(p => p.Kolicina > 0).ToList();
+        }
         public List<Proizvod> GetFilteredProducts()
         {
             return filteredProizvodi;

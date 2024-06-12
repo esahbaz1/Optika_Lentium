@@ -4,8 +4,11 @@ namespace Optika_Lentium.Patterns
 {
     public interface INarudzba
     {
-        List<Narucivanje> GetCart(int idKorisnika);
-		void AddToCart(int idKorisnika, int idProizvoda);
+        void AddToCart(Proizvod proizvod);
+        void RemoveFromCart(int proizvodId);
+        List<Proizvod> GetCartItems();
+        void ClearCart();
+        
 
-	}
+    }
 }

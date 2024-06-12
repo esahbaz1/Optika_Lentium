@@ -38,12 +38,7 @@ namespace Optika_Lentium.Controllers
 		{
 			return View();
 		}
-		public async Task<IActionResult> AddToCart(int id)
-		{
-			_narudzbaService.AddToCart(1, id);
-			return Json(new { message = "Radi!" });
-
-		}
+		
         [Authorize]
         public IActionResult Placanje()
 		{

@@ -14,8 +14,7 @@ namespace Optika_Lentium.Models
 
         [ForeignKey("Proizvod")]
         public int proizvodId { get; set; } 
-        public Placanje placanje { get; set; }  
-
+        
         public int zaliha {  get; set; }    
 
         public Narucivanje() { }

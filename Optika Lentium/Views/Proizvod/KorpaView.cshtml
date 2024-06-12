@@ -1,10 +1,12 @@
-﻿@{
+﻿@model IEnumerable<Optika_Lentium.Models.Proizvod>
+@{
     ViewData["Title"] = "Korpa";
     Layout = null;
 }
 
 @using Optika_Lentium.Patterns;
 @inject INarudzba NaruzbaService
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,27 +100,25 @@
                         </tr>
                     </thead>
                     <tbody class="align-middle">
-                        <tr>
-                            <td class="align-middle"><img src="images/cale1.jpg" alt="" style="width: 50px;">proizvodId</td>
-                            <td class="align-middle">placanje.iznosPlacanja KM</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" onclick="showAlert()">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="align-middle"><img src="@item.slikaURL" alt="" style="width: 50px;"> @item.nazivProizvod</td>
+                                <td class="align-middle">@item.cijena KM</td>
+                                <td class="align-middle">
+                                    <div class="input-group quantity mx-auto" style="width: 100px;">
+                                        <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1" readonly>
                                     </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1" readonly>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus" onclick="showAlert()">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">placanje.iznosPlacanja KM</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
+                                </td>
+                                <td class="align-middle">@item.cijena KM</td>
+                                <td class="align-middle">
+                                    <form method="post" asp-controller="Proizvod" asp-action="RemoveFromCart" style="display:inline;">
+                                        <input type="hidden" name="proizvodId" value="@item.proizvodId" />
+                                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

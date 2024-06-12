@@ -331,9 +331,6 @@ namespace Optika_Lentium.Data.Migrations
                     b.Property<string>("korisnikId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("placanjeId")
-                        .HasColumnType("int");
-
                     b.Property<int>("proizvodId")
                         .HasColumnType("int");
 
@@ -346,8 +343,6 @@ namespace Optika_Lentium.Data.Migrations
                     b.HasKey("narucivanjeId");
 
                     b.HasIndex("korisnikId");
-
-                    b.HasIndex("placanjeId");
 
                     b.ToTable("Narucivanje", (string)null);
                 });
@@ -471,6 +466,9 @@ namespace Optika_Lentium.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("proizvodId"));
 
+                    b.Property<int>("Kolicina")
+                        .HasColumnType("int");
+
                     b.Property<double>("cijena")
                         .HasColumnType("float");
 
@@ -567,10 +565,6 @@ namespace Optika_Lentium.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("korisnikId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("nacinKontakta")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -580,8 +574,6 @@ namespace Optika_Lentium.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("pregledId");
-
-                    b.HasIndex("korisnikId");
 
                     b.ToTable("ZakazivanjePregleda", (string)null);
                 });
@@ -652,15 +644,7 @@ namespace Optika_Lentium.Data.Migrations
                         .WithMany()
                         .HasForeignKey("korisnikId");
 
-                    b.HasOne("Optika_Lentium.Models.Placanje", "placanje")
-                        .WithMany()
-                        .HasForeignKey("placanjeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("korisnik");
-
-                    b.Navigation("placanje");
                 });
 
             modelBuilder.Entity("Optika_Lentium.Models.Placanje", b =>
@@ -679,17 +663,6 @@ namespace Optika_Lentium.Data.Migrations
                         .HasForeignKey("Optika_Lentium.Models.Popust", "placanjeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Optika_Lentium.Models.ZakazivanjePregleda", b =>
-                {
-                    b.HasOne("Optika_Lentium.Models.Korisnik", "korisnik")
-                        .WithMany()
-                        .HasForeignKey("korisnikId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("korisnik");
                 });
 
             modelBuilder.Entity("Optika_Lentium.Models.Placanje", b =>

@@ -7,7 +7,7 @@ namespace Optika_Lentium.Models
     public class ZakazivanjePregleda
     {
        [Key]
-        public int pregledId {  get; set; }
+        public int pregledId {  get; set; } 
         public string imePrezime { get; set; }  
         public string email { get; set; } 
         public string brojTelefona {  get; set; } 

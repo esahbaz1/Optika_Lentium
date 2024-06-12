@@ -6,29 +6,31 @@ namespace Optika_Lentium.Patterns
 {
     public class NarudzbaService : INarudzba
     {
-        private List<Narucivanje> korpa = new List<Narucivanje>();
-        private List<Narucivanje> korpaFiltered = new List<Narucivanje>();
+        private readonly List<Proizvod> _cartItems = new List<Proizvod>();
 
-        public NarudzbaService()
+        public void AddToCart(Proizvod proizvod)
         {
-            korpa = new List<Narucivanje>();
-            korpaFiltered = korpa.ToList();
+            _cartItems.Add(proizvod);
         }
 
-		public List<Narucivanje> GetCart(int idKorisnika)
+        public void RemoveFromCart(int proizvodId)
         {
-            return korpa;
-        }
-
-		public void AddToCart(int idKorisnika, int idProizvoda)
-		{
-            korpa.Add(new Narucivanje()
+            var item = _cartItems.FirstOrDefault(p => p.proizvodId == proizvodId);
+            if (item != null)
             {
-                proizvodId = idProizvoda,
-                narucivanjeId = korpa.Count+1,
-                korisnik = new Korisnik() { korisnikId = idKorisnika }
-            });
-		}
+                _cartItems.Remove(item);
+            }
+        }
 
-	}
+        public List<Proizvod> GetCartItems()
+        {
+            return _cartItems;
+        }
+
+        public void ClearCart()
+        {
+            _cartItems.Clear();
+        }
+
+    }
 }

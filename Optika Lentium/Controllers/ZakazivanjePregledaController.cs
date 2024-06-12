@@ -64,9 +64,9 @@ namespace Optika_Lentium.Controllers
             {
                 // Retrieve the number of users in the AspNetUsers table
                 int userCount = await _context.Users.CountAsync();
-
+                int maxPregledId = _context.ZakazivanjePregleda.Max(p => p.pregledId);
                 // Increment pregledId based on the user count
-                zakazivanjePregleda.pregledId = userCount + 1;
+                zakazivanjePregleda.pregledId = maxPregledId + 1;
 
                 _context.Add(zakazivanjePregleda);
                 await _context.SaveChangesAsync();

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Optika_Lentium.Data;
@@ -12,25 +13,29 @@ namespace Optika_Lentium.Controllers
     {
         private readonly ILogger<ProizvodController> _logger;
         private readonly IProizvod _proizvodService;
+        private readonly INarudzba _narudzbaService;
 
-        public ProizvodController(ILogger<ProizvodController> logger, IProizvod p)
+        public ProizvodController(ILogger<ProizvodController> logger, IProizvod p, INarudzba _narudzbaServices)
         {
             _logger = logger;
             _proizvodService = p;
+            _narudzbaService = _narudzbaServices;
+
         }
 
-        public IActionResult Index()
+    public IActionResult Index()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult MeniView(string tip, string pol, string brend,string cijena)
+        public IActionResult MeniView(string tip, string pol, string brend, string cijena)
         {
             _proizvodService.FilterProducts(tip, pol, brend, cijena);
-            _logger.LogInformation(tip +pol+brend+cijena);
-            _logger.LogInformation(_proizvodService.GetFilteredProducts().Count.ToString());  
-            return View();
+            var availableProducts = _proizvodService.GetAvailableProducts();
+            _logger.LogInformation(tip + pol + brend + cijena);
+            _logger.LogInformation(availableProducts.Count.ToString());
+            return View(availableProducts);
         }
         [Authorize]
         public async Task<IActionResult> PregledProView(int? id)
@@ -77,11 +82,26 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
-        [Authorize]
-        public IActionResult KorpaView()
+       
+        [HttpPost]
+        public IActionResult AddToCart(Proizvod proizvodId)
         {
-            return View();
+            _logger.LogInformation($"Adding product {proizvodId} to cart.");
+            _narudzbaService.AddToCart(proizvodId);
+            return RedirectToAction("KorpaView");
         }
 
+        [HttpPost]
+        public IActionResult RemoveFromCart(int proizvodId)
+        {
+            _narudzbaService.RemoveFromCart(proizvodId);
+            return RedirectToAction("KorpaView");
+        }
+         [Authorize]
+        public IActionResult KorpaView()
+        {
+            var cartItems = _narudzbaService.GetCartItems();
+            return View(cartItems);
+        }
     }
 }
