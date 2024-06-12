@@ -1,17 +1,19 @@
-﻿@{
+﻿@model IEnumerable<Optika_Lentium.Models.Proizvod>
+@{
     ViewData["Title"] = "Meni";
     Layout = null;
 }
 
 @using Optika_Lentium.Patterns;
 @inject IProizvod ProizvodService
+@inject INarudzba NaruzbaService
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
+    <title>Meni</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -59,7 +61,13 @@
                 </div>
             </div>
         </div>
-        
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-1 mr-0">O</span>ptika Lentium</h1>
+                </a>
+            </div>
+        </div>
     </div>
     <!-- Topbar End -->
     <!-- Navbar Start -->
@@ -68,6 +76,7 @@
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
                     <h6 class="m-0">Kategorije</h6>
+
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
@@ -76,25 +85,49 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">Dioptrijski okviri <i class="fa fa-angle-down float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">Muški</a>
-                                <a href="" class="dropdown-item">Ženski</a>
-                                <a href="" class="dropdown-item">Dječiji</a>
-
-
+                                @{
+                                    var pol = Kategorija.Muski;
+                                    var tip = Tip.Okviri;
+                                }
+                                <a class="dropdown-item" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@tip" asp-route-pol="@pol">Muški</a>
+                                @{
+                                    pol = Kategorija.Zenski;
+                                    tip = Tip.Okviri;
+                                }
+                                <a class="dropdown-item" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@tip" asp-route-pol="@pol">Ženski</a>
+                                @{
+                                    pol = Kategorija.Djeciji;
+                                    tip = Tip.Okviri;
+                                }
+                                <a class="dropdown-item" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@tip" asp-route-pol="@pol">Dječiji</a>
                             </div>
                         </div>
 
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">Sunčane naočale <i class="fa fa-angle-down float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">Muške</a>
-                                <a href="" class="dropdown-item">Ženske</a>
-                                <a href="" class="dropdown-item">Dječije</a>
+                                @{
+                                    pol = Kategorija.Zenski;
+                                    tip = Tip.Naocale;
+                                }
+                                <a class="dropdown-item" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@tip" asp-route-pol="@pol">Ženske</a>
+                                @{
+                                    pol = Kategorija.Muski;
+                                    tip = Tip.Naocale;
+                                }
+                                <a class="dropdown-item" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@tip" asp-route-pol="@pol">Muške</a>
+                                @{
+                                    pol = Kategorija.Djeciji;
+                                    tip = Tip.Naocale;
+                                }
+                                <a class="dropdown-item" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@tip" asp-route-pol="@pol">Dječije</a>
                             </div>
                         </div>
 
-                        <a href="" class="nav-item nav-link">Leće i otopine</a>
-                        <a href="" class="nav-item nav-link">Asesoari</a>
+                        <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Lece">Leće i otopine</a>
+                        <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="MeniView" asp-route-tip="@Tip.Asesoari">Asesoari</a>
+
+
 
                     </div>
                 </nav>
@@ -109,14 +142,14 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="~/View/Home/Index.cshtml" class="nav-item nav-link">Početna</a>
+                            <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="Index">Početna</a>
                             <a href="shop.html" class="nav-item nav-link active">Pregled</a>
 
-                            <a href="contact.html" class="nav-item nav-link">Kontakt</a>
+                            <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="KontaktView">Kontakt</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
-                            <a href="" class="nav-item nav-link">Login</a>
-                            <a href="" class="nav-item nav-link">Register</a>
+                            <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="LoginView">Login</a>
+                            <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="SignupView">Register</a>
                         </div>
                     </div>
                 </nav>
@@ -143,77 +176,63 @@
                 <!-- Price Start -->
                 <div class="border-bottom mb-4 pb-4">
                     <h5 class="font-weight-semi-bold mb-4">Filtrirano po cijeni</h5>
-                    <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="price-all">
+                    <form name="filterPrices">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterPriceRadios" value="sve" class="custom-control-input" checked id="price-all">
                             <label class="custom-control-label" for="price-all">Sve cijene</label>
-                            <span class="badge border font-weight-normal">10</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-1">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterPriceRadios" value="0-100" class="custom-control-input" id="price-1">
                             <label class="custom-control-label" for="price-1">0 - 100 KM</label>
-                            <span class="badge border font-weight-normal">1</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-2">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterPriceRadios" value="100-200" class="custom-control-input" id="price-2">
                             <label class="custom-control-label" for="price-2">100 - 200 KM</label>
-                            <span class="badge border font-weight-normal">3</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-3">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterPriceRadios" value="200-300" class="custom-control-input" id="price-3">
                             <label class="custom-control-label" for="price-3">200 - 300 KM</label>
-                            <span class="badge border font-weight-normal">3</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-4">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterPriceRadios" value="300-400" class="custom-control-input" id="price-4">
                             <label class="custom-control-label" for="price-4">300 - 400 KM</label>
-                            <span class="badge border font-weight-normal">2</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
-                            <input type="checkbox" class="custom-control-input" id="price-5">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between">
+                            <input type="radio" name="filterPriceRadios" value="400-500" class="custom-control-input" id="price-5">
                             <label class="custom-control-label" for="price-5">400 - 500 KM</label>
-                            <span class="badge border font-weight-normal">1</span>
                         </div>
                     </form>
                 </div>
                 <!-- Price End -->
-                <!-- Color Start -->
-                
-                <!-- Color End -->
                 <!-- Size Start -->
                 <div class="mb-5">
                     <h5 class="font-weight-semi-bold mb-4">Filtrirano po brendu</h5>
-                    <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="size-all">
-                            <label class="custom-control-label" for="size-all">Svi brendovi</label>
-                            <span class="badge border font-weight-normal">10</span>
+                    <form name="filterBrendovi" action="/Proizvod/FilterByBrend">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="svi" checked id="svi-brendovi">
+                            <label class="custom-control-label" for="svi-brendovi">Svi brendovi</label>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-1">
-                            <label class="custom-control-label" for="size-1">Adidas</label>
-                            <span class="badge border font-weight-normal">1</span>
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Dolce&Gabbana" id="dolce&gabbana">
+                            <label class="custom-control-label" for="dolce&gabbana">Dolce&Gabbana</label>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">Clark</label>
-                            <span class="badge border font-weight-normal">4</span>
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Esprit" id="esprit">
+                            <label class="custom-control-label" for="esprit">Esprit</label>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-3">
-                            <label class="custom-control-label" for="size-3">Dolce&Gabbana</label>
-                            <span class="badge border font-weight-normal">3</span>
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Ray Ban" id="rayban">
+                            <label class="custom-control-label" for="rayban">Ray Ban</label>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-4">
-                            <label class="custom-control-label" for="size-4">Esprit</label>
-                            <span class="badge border font-weight-normal">1</span>
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Tom Tailor" id="tom tailor">
+                            <label class="custom-control-label" for="tom tailor">Tom Tailor</label>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
-                            <input type="checkbox" class="custom-control-input" id="size-5">
-                            <label class="custom-control-label" for="size-5">Vogue</label>
-                            <span class="badge border font-weight-normal">1</span>
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between">
+                            <input type="radio" name="filterBrandRadios" class="custom-control-input" value="Vogue" id="vogue">
+                            <label class="custom-control-label" for="vogue">Vogue</label>
                         </div>
+
                     </form>
                 </div>
                 <!-- Size End -->
@@ -221,23 +240,8 @@
             <!-- Shop Sidebar End -->
             <!-- Shop Product Start -->
             <div class="col-lg-9 col-md-12">
+                <div id="message" class="message" style="display: none; "></div>
                 <div class="row pb-3">
-                    <div class="col-12 pb-1">
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <form action="">
-                                <div class="input-group">
-
-                                    <div class="input-group-append">
-                                        <span class="input-group-text bg-transparent text-primary">
-                                           
-                                        </span>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-
                     @foreach (Proizvod p in ProizvodService.GetFilteredProducts())
                     {
                         <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
@@ -251,102 +255,19 @@
                                         <h6>@p.cijena KM</h6>
                                     </div>
                                 </div>
+
+
                                 <div class="card-footer d-flex justify-content-between bg-light border">
                                     <a class="btn btn-sm text-dark p-0" asp-area="" asp-controller="Proizvod" asp-action="PregledProView" asp-route-id="@p.proizvodId"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
+                                    <form asp-controller="Proizvod" asp-action="AddToCart" method="post">
+                                        <input type="hidden" name="productId" value="@p.proizvodId" />
+                                        <button type="submit" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</button>
+                                    </form>
                                 </div>
+
                             </div>
                         </div>
                     }
-
-
-                    <!--
-                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                        <div class="card product-item border-0 mb-4">
-                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="~/images/cale2.jpg" alt="">
-                            </div>
-                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                <h6 class="text-truncate mb-3">Vogue</h6>
-                                <div class="d-flex justify-content-center">
-                                    <h6>425.00 KM</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a asp-area="" asp-controller="Proizvod" asp-action="PregledProView" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                        <div class="card product-item border-0 mb-4">
-                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="~/images/cale3.jpg" alt="">
-                            </div>
-                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                <h6 class="text-truncate mb-3">Esprit</h6>
-                                <div class="d-flex justify-content-center">
-                                    <h6>425.00 KM</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                        <div class="card product-item border-0 mb-4">
-                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="~/images/cale4.jpg" alt="">
-                            </div>
-                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                <h6 class="text-truncate mb-3">Vogue</h6>
-                                <div class="d-flex justify-content-center">
-                                    <h6>425.00 KM</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                        <div class="card product-item border-0 mb-4">
-                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="~/images/cale5.jpg" alt="">
-                            </div>
-                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                <h6 class="text-truncate mb-3">Vogue</h6>
-                                <div class="d-flex justify-content-center">
-                                    <h6>425.00 KM</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                        <div class="card product-item border-0 mb-4">
-                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                <img class="img-fluid w-100" src="~/images/cale6.jpg" alt="">
-                            </div>
-                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                <h6 class="text-truncate mb-3">Adidas</h6>
-                                <div class="d-flex justify-content-center">
-                                    <h6>425.00 KM</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between bg-light border">
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Vidi detalje</a>
-                                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Dodaj u korpu</a>
-                            </div>
-                        </div>
-                    </div>
-                    -->
 
 
                     <div class="col-12 pb-1">
@@ -359,8 +280,7 @@
                                     </a>
                                 </li>
                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
@@ -393,11 +313,11 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Linkovi</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Pocetna</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Pregled</a>
-                            <a class="text-dark mb-2" asp-page="/KorpaView"><i class="fa fa-angle-right mr-2"></i>Korpa</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Plaćanje</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Login</a>
+                            <a class="text-dark mb-2" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-angle-right mr-2"></i>Pocetna</a>
+                            <a class="text-dark mb-2" asp-action="MeniView"><i class="fa fa-angle-right mr-2"></i>Pregled</a>
+                            <a class="text-dark mb-2" asp-action="KorpaView"><i class="fa fa-angle-right mr-2"></i>Korpa</a>
+                            <a class="text-dark mb-2" asp-action="Placanje"><i class="fa fa-angle-right mr-2"></i>Plaćanje</a>
+                            <a class="text-dark" asp-action="LoginView"><i class="fa fa-angle-right mr-2"></i>Login</a>
                         </div>
                     </div>
 
@@ -448,6 +368,134 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function getAllUrlParams(url) {
+
+            // get query string from url (optional) or window
+            var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+            // we'll store the parameters here
+            var obj = {};
+
+            // if query string exists
+            if (queryString) {
+
+                // stuff after # is not part of query string, so get rid of it
+                queryString = queryString.split('#')[0];
+
+                // split our query string into its component parts
+                var arr = queryString.split('&');
+
+                for (var i = 0; i < arr.length; i++) {
+                    // separate the keys and the values
+                    var a = arr[i].split('=');
+
+                    // set parameter name and value (use 'true' if empty)
+                    var paramName = a[0];
+                    var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+                    // (optional) keep case consistent
+                    paramName = paramName.toLowerCase();
+                    if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+                    // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+                    if (paramName.match(/\[(\d+)?\]$/)) {
+
+                        // create key if it doesn't exist
+                        var key = paramName.replace(/\[(\d+)?\]/, '');
+                        if (!obj[key]) obj[key] = [];
+
+                        // if it's an indexed array e.g. colors[2]
+                        if (paramName.match(/\[\d+\]$/)) {
+                            // get the index value and add the entry at the appropriate position
+                            var index = /\[(\d+)\]/.exec(paramName)[1];
+                            obj[key][index] = paramValue;
+                        } else {
+                            // otherwise add the value to the end of the array
+                            obj[key].push(paramValue);
+                        }
+                    } else {
+                        // we're dealing with a string
+                        if (!obj[paramName]) {
+                            // if it doesn't exist, create property
+                            obj[paramName] = paramValue;
+                        } else if (obj[paramName] && typeof obj[paramName] === 'string') {
+                            // if property does exist and it's a string, convert it to an array
+                            obj[paramName] = [obj[paramName]];
+                            obj[paramName].push(paramValue);
+                        } else {
+                            // otherwise add the property
+                            obj[paramName].push(paramValue);
+                        }
+                    }
+                }
+            }
+
+            return obj;
+        }
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+
+        var radBrand = document.filterBrendovi.filterBrandRadios;
+        for (var i = 0; i < radBrand.length; i++) {
+            radBrand[i].onclick = function () {
+                var pol = getAllUrlParams().pol
+                if (pol == undefined)
+                    pol = null
+                else
+                    pol = capitalizeFirstLetter(pol)
+                var tip = getAllUrlParams().tip
+                if (tip == undefined)
+                    tip = null
+                else
+                    tip = capitalizeFirstLetter(tip)
+                var cijena = getAllUrlParams().cijena
+                if (cijena == undefined)
+                    cijena = null
+                const url = "/Proizvod/MeniView?tip=" + tip + "&pol=" + pol + "&brend=" + this.value + "&cijena=" + cijena;
+
+                console.log(url);
+
+                const response = fetch(url);
+
+                window.location.href = url;
+
+            };
+        }
+
+        var radPrices = document.filterPrices.filterPriceRadios;
+        for (var i = 0; i < radPrices.length; i++) {
+            radPrices[i].onclick = function () {
+                var pol = getAllUrlParams().pol
+                if (pol == undefined)
+                    pol = null
+                else
+                    pol = capitalizeFirstLetter(pol)
+                var tip = getAllUrlParams().tip
+                if (tip == undefined)
+                    tip = null
+                else
+                    tip = capitalizeFirstLetter(tip)
+                var brend = getAllUrlParams().brend
+                if (brend == undefined)
+                    brend = null
+                const url = "/Proizvod/MeniView?tip=" + tip + "&pol=" + pol + "&brend=" + brend + "&cijena=" + this.value;
+
+                console.log(url);
+
+                const response = fetch(url);
+                window.location.href = url;
+
+
+
+            };
+        }
+
+
+    </script>
 </body>
 
 </html>

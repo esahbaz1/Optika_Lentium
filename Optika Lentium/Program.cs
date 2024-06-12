@@ -20,7 +20,8 @@ builder.Services.AddDefaultIdentity<Korisnik>(options => options.SignIn.RequireC
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-
+builder.Services.AddSession();
+builder.Services.AddScoped<IProizvod, ProizvodService>();
 
 builder.Services.AddControllersWithViews();
 
@@ -44,6 +45,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
 	name: "default",

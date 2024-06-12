@@ -1,10 +1,12 @@
-﻿@{
+﻿@model List<Proizvod>
+@{
     ViewData["Title"] = "Korpa";
     Layout = null;
 }
 
 @using Optika_Lentium.Patterns;
 @inject INarudzba NaruzbaService
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,27 +100,21 @@
                         </tr>
                     </thead>
                     <tbody class="align-middle">
-                        <tr>
-                            <td class="align-middle"><img src="images/cale1.jpg" alt="" style="width: 50px;">proizvodId</td>
-                            <td class="align-middle">placanje.iznosPlacanja KM</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" onclick="showAlert()">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1" readonly>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus" onclick="showAlert()">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">placanje.iznosPlacanja KM</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
+                        @foreach (var product in Model)
+                        {
+                            <tr>
+                                <td class="align-middle">@product.nazivProizvod</td>
+                                <td class="align-middle">@product.cijena KM</td>
+                                <td class="align-middle">@product.Kolicina</td>
+                                <td class="align-middle">@(product.cijena * product.Kolicina) KM</td>
+                                <td class="align-middle">
+                                    <form asp-controller="Proizvod" asp-action="RemoveFromCart" method="post">
+                                        <input type="hidden" name="productId" value="@product.proizvodId" />
+                                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

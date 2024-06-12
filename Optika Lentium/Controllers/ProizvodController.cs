@@ -1,29 +1,27 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Optika_Lentium.Data;
 using Optika_Lentium.Models;
 using Optika_Lentium.Patterns;
+using System.Text.Json;
 
 namespace Optika_Lentium.Controllers
 {
-    
     public class ProizvodController : Controller
     {
+        private readonly ApplicationDbContext _context;
         private readonly ILogger<ProizvodController> _logger;
         private readonly IProizvod _proizvodService;
-        private readonly INarudzba _narudzbaService;
 
-        public ProizvodController(ILogger<ProizvodController> logger, IProizvod p, INarudzba _narudzbaServices)
+        public ProizvodController(ILogger<ProizvodController> logger, IProizvod p, ApplicationDbContext context)
         {
+            _context = context;
             _logger = logger;
             _proizvodService = p;
-            _narudzbaService = _narudzbaServices;
-
         }
 
-    public IActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
@@ -37,24 +35,25 @@ namespace Optika_Lentium.Controllers
             _logger.LogInformation(availableProducts.Count.ToString());
             return View(availableProducts);
         }
+
         [Authorize]
         public async Task<IActionResult> PregledProView(int? id)
-		{
-			if (id == null)
-			{
-				return NotFound();
-			}
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
             var product = _proizvodService.GetAllProducts().Find(p => p.proizvodId == id);
-			if (product == null)
-			{
-				return NotFound();
-			}
+            if (product == null)
+            {
+                return NotFound();
+            }
 
-			return View(product);
-		}
+            return View(product);
+        }
 
-		public IActionResult KontaktView()
+        public IActionResult KontaktView()
         {
             return View();
         }
@@ -63,45 +62,81 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
+
         public IActionResult SignupView()
         {
             return View();
         }
+
         [Authorize]
         public IActionResult Uspjesnoplacanje()
-		{
-			return View();
-		}
+        {
+            return View();
+        }
+
         [Authorize]
         public IActionResult Neuspjesnoplacanje()
-		{
-			return View();
-		}
+        {
+            return View();
+        }
+
         [Authorize]
         public IActionResult Placanje()
         {
             return View();
         }
-       
+
         [HttpPost]
-        public IActionResult AddToCart(Proizvod proizvodId)
+        public IActionResult AddToCart(int productId)
         {
-            _logger.LogInformation($"Adding product {proizvodId} to cart.");
-            _narudzbaService.AddToCart(proizvodId);
+            var product = _context.Proizvod.Find(productId);
+            if (product != null)
+            {
+                var cart = GetCartFromSession();
+                cart.Add(product);
+                SaveCartToSession(cart);
+            }
             return RedirectToAction("KorpaView");
         }
 
         [HttpPost]
-        public IActionResult RemoveFromCart(int proizvodId)
+        public IActionResult RemoveFromCart(int productId)
         {
-            _narudzbaService.RemoveFromCart(proizvodId);
-            return RedirectToAction("KorpaView");
+            var cart = GetCartFromSession();
+            var product = cart.FirstOrDefault(p => p.proizvodId == productId);
+            if (product != null)
+            {
+                cart.Remove(product);
+                SaveCartToSession(cart);
+                return RedirectToAction("KorpaView");
+            }
+            return NotFound();
         }
-         [Authorize]
+
         public IActionResult KorpaView()
         {
-            var cartItems = _narudzbaService.GetCartItems();
-            return View(cartItems);
+            var cart = GetCartFromSession();
+            double ukupnaCijena = cart.Sum(p => p.cijena);
+
+            
+            ViewBag.UkupnaCijena = ukupnaCijena;
+            return View(cart);
+        }
+
+        private List<Proizvod> GetCartFromSession()
+        {
+            var cartJson = HttpContext.Session.GetString("Cart");
+            if (cartJson == null)
+            {
+                return new List<Proizvod>();
+            }
+            return JsonSerializer.Deserialize<List<Proizvod>>(cartJson);
+        }
+
+        private void SaveCartToSession(List<Proizvod> cart)
+        {
+            var cartJson = JsonSerializer.Serialize(cart);
+            HttpContext.Session.SetString("Cart", cartJson);
         }
     }
 }
