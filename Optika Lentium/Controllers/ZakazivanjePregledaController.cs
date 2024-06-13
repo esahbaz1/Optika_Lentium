@@ -32,6 +32,7 @@ namespace Optika_Lentium.Controllers
         }
 
         // GET: ZakazivanjePregleda/Details/5
+        [Authorize(Roles = "Administrator, Radnik")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -76,6 +77,7 @@ namespace Optika_Lentium.Controllers
         }
 
         // GET: ZakazivanjePregleda/Edit/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -92,6 +94,7 @@ namespace Optika_Lentium.Controllers
         }
 
         // POST: ZakazivanjePregleda/Edit/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("pregledId,imePrezime,email,brojTelefona,nacinKontakta,danPregleda,vrijemePregleda")] ZakazivanjePregleda zakazivanjePregleda)
@@ -125,6 +128,7 @@ namespace Optika_Lentium.Controllers
         }
 
         // GET: ZakazivanjePregleda/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -143,6 +147,7 @@ namespace Optika_Lentium.Controllers
         }
 
         // POST: ZakazivanjePregleda/Delete/5
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

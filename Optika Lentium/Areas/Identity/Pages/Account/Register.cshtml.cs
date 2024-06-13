@@ -82,10 +82,12 @@ namespace Optika_Lentium.Areas.Identity.Pages.Account
             /// </summary>
             /// [Required]
             [Display(Name = "Ime")]
+            [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Neispravan unos.")]
             public string FirstName { get; set; }
 
             [Required]
             [Display(Name = "Prezime")]
+            [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Neispravan unos.")]
             public string LastName { get; set; }
             [Required]
             [EmailAddress]

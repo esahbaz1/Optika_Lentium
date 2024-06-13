@@ -25,13 +25,17 @@
                         <div>
                             <br>
                             <label for="fname"></label>
-                            <input type="text" id="fname" name="imePrezime" placeholder="Ime i prezime" required>
+                            <input type="text" id="fname" name="imePrezime" placeholder="Ime i prezime" required
+                                   pattern="[A-Za-zćčđšžĆČĐŠŽ\s]+"
+                                   title="Molimo unesite samo slova i razmake. Brojevi i interpunkcijski znakovi nisu dozvoljeni." />
 
                             <label for="email"></label>
-                            <input type="text" id="email" name="email" placeholder="Email" required>
+                           <input type="email" id="email" name="email" placeholder="Email" required pattern=".+\.com" />
 
                             <label for="phone"></label>
-                            <input type="text" id="phone" name="brojTelefona" placeholder="Broj telefona" required>
+                            <input type="text" id="phone" name="brojTelefona" placeholder="Broj telefona" required
+                                   pattern="[0-9+]+"
+                                   title="Molimo unesite samo brojeve i eventualno plus znak za međunarodne brojeve." />
 
 
 

@@ -94,6 +94,11 @@ body {
     bottom: 20%;
     left: 22.8%;
 }
+
+
+    .buy:hover {
+        background: #5ac11a; /* Promjena boje prilikom hovera */
+    }
 /* the Button */
 .btn {
     transform: translateY(0px);

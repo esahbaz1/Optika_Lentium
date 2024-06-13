@@ -85,7 +85,7 @@ namespace Optika_Lentium.Controllers
         {
             return View();
         }
-
+        [Authorize]
         [HttpPost]
         public IActionResult AddToCart(int productId)
         {
@@ -98,7 +98,7 @@ namespace Optika_Lentium.Controllers
             }
             return RedirectToAction("KorpaView");
         }
-
+        
         [HttpPost]
         public IActionResult RemoveFromCart(int productId)
         {
@@ -112,14 +112,20 @@ namespace Optika_Lentium.Controllers
             }
             return NotFound();
         }
-
+        [Authorize]
         public IActionResult KorpaView()
         {
             var cart = GetCartFromSession();
             double ukupnaCijena = cart.Sum(p => p.cijena);
-
-            
+            double  popust = 0;
+            double ukupno = ukupnaCijena;
+            if (ukupnaCijena > 300) {
+                popust = 10;
+                ukupno -=0.1*ukupnaCijena;
+            }
+            ViewBag.ukupno = ukupno;
             ViewBag.UkupnaCijena = ukupnaCijena;
+            ViewBag.popust = popust;
             return View(cart);
         }
 

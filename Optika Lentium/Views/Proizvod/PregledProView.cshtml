@@ -35,7 +35,8 @@
 					<!-- 		shopping cart icon-->
 					<span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
 					<!-- 		Buy Now / ADD to Cart-->
-					<span class="buy">Dodaj u korpu</span>
+					<span class="buy" id="addToCart">Dodaj u korpu</span>
+				
 				</button>
 				<!-- End Button buying -->
 				<div id="message" class="message" style="display: none; "></div>
@@ -67,26 +68,28 @@
 	</div>
 
 	<script>
-		document.getElementById("addToCartBtn").addEventListener("click", function () {
-			document.getElementById("message").style.display = "block";
-			document.getElementById("message").textContent = "Proizvod dodan u korpu!";
+		var addToCartButton = document.getElementById('addToCart');
+
+		// Dodaje event listener za klik na span element
+		addToCartButton.addEventListener('click', function () {
+			// Kreira novi form element
+			var form = document.createElement('form');
+			form.setAttribute('method', 'post');
+			form.setAttribute('action', '/Proizvod/AddToCart'); // Putanja do vaše akcije AddToCart
+
+			// Dodaje skriveni input element za productId
+			var productIdInput = document.createElement('input');
+			productIdInput.setAttribute('type', 'hidden');
+			productIdInput.setAttribute('name', 'productId');
+			productIdInput.setAttribute('value', '@Model.proizvodId'); // Vrijednost proizvodId prema vašem modelu
+
+			// Dodaje input element u formu
+			form.appendChild(productIdInput);
+
+			// Dodaje formu u body dokumenta i submita ju
+			document.body.appendChild(form);
+			form.submit();
 		});
-
-		document.getElementById('addToCartBtn').addEventListener('click', AddToCart);
-
-		async function AddToCart() {
-			const parameters = new URLSearchParams();
-			parameters.append("id", @Model.proizvodId.ToString());
-			const url = "/Narudzba/AddToCart?" + parameters.toString();
-
-			console.log(url);
-
-			const response = await fetch(url)
-				.then(result => result.json());
-
-			console.log(response);
-
-		}
 	</script>
 </body>
 </html>

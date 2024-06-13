@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\views\\proizvod\\korpaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:views\\proizvod\\korpaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\controllers\\proizvodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:controllers\\proizvodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\views\\narudzba\\korpaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:views\\narudzba\\korpaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\views\\proizvod\\meniview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:views\\proizvod\\meniview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\views\\home\\kontaktview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:views\\home\\kontaktview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|c:\\users\\emina\\source\\repos\\grupa5-tim34-optika-lentium\\optika lentium\\wwwroot\\css\\proizvod.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:wwwroot\\css\\proizvod.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\patterns\\proizvodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:patterns\\proizvodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\views\\proizvod\\pregledproview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7CFC69B-E826-41DD-BD28-70FB57187063}|Optika Lentium.csproj|solutionrelative:views\\proizvod\\pregledproview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,93 +74,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "KorpaView.cshtml",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Narudzba\\KorpaView.cshtml",
-              "RelativeDocumentMoniker": "Views\\Narudzba\\KorpaView.cshtml",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Narudzba\\KorpaView.cshtml",
-              "RelativeToolTip": "Views\\Narudzba\\KorpaView.cshtml",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAAAGoAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-12T18:07:45.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T17:54:12.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T17:48:15.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MeniView.cshtml",
               "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\MeniView.cshtml",
               "RelativeDocumentMoniker": "Views\\Proizvod\\MeniView.cshtml",
               "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\MeniView.cshtml",
               "RelativeToolTip": "Views\\Proizvod\\MeniView.cshtml",
-              "ViewState": "AQIAAOMBAAAAAAAAAAAQwPQBAAAHAAAA",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAjwJ8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-12T17:13:40.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProizvodService.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Patterns\\ProizvodService.cs",
-              "RelativeDocumentMoniker": "Patterns\\ProizvodService.cs",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Patterns\\ProizvodService.cs",
-              "RelativeToolTip": "Patterns\\ProizvodService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T17:04:21.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "KorpaView.cshtml",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\KorpaView.cshtml",
-              "RelativeDocumentMoniker": "Views\\Proizvod\\KorpaView.cshtml",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\KorpaView.cshtml*",
-              "RelativeToolTip": "Views\\Proizvod\\KorpaView.cshtml*",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAAAJ0AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-12T17:13:38.875Z",
+              "WhenOpened": "2024-06-13T15:52:59.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProizvodController.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Controllers\\ProizvodController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProizvodController.cs",
-              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Controllers\\ProizvodController.cs*",
-              "RelativeToolTip": "Controllers\\ProizvodController.cs*",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAqwHUAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T17:12:11.464Z",
+              "Title": "KontaktView.cshtml",
+              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Home\\KontaktView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\KontaktView.cshtml",
+              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Home\\KontaktView.cshtml",
+              "RelativeToolTip": "Views\\Home\\KontaktView.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T15:48:47.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PregledProView.cshtml",
+              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\PregledProView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Proizvod\\PregledProView.cshtml",
+              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\Views\\Proizvod\\PregledProView.cshtml",
+              "RelativeToolTip": "Views\\Proizvod\\PregledProView.cshtml",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T13:30:58.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Proizvod.css",
+              "DocumentMoniker": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\Proizvod.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\Proizvod.css",
+              "ToolTip": "C:\\Users\\emina\\source\\repos\\grupa5-tim34-Optika-Lentium\\Optika Lentium\\wwwroot\\css\\Proizvod.css",
+              "RelativeToolTip": "wwwroot\\css\\Proizvod.css",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAAGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-13T13:29:42.625Z",
               "EditorCaption": ""
             }
           ]

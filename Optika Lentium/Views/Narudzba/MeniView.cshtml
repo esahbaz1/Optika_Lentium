@@ -148,8 +148,8 @@
                             <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="KontaktView">Kontakt</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
-                            <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="LoginView">Login</a>
-                            <a class="nav-item nav-link" asp-controller="Proizvod" asp-action="SignupView">Register</a>
+                            <a class="nav-item nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                            <a class="nav-item nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
                         </div>
                     </div>
                 </nav>
@@ -317,7 +317,7 @@
                             <a class="text-dark mb-2" asp-action="MeniView"><i class="fa fa-angle-right mr-2"></i>Pregled</a>
                             <a class="text-dark mb-2" asp-action="KorpaView"><i class="fa fa-angle-right mr-2"></i>Korpa</a>
                             <a class="text-dark mb-2" asp-action="Placanje"><i class="fa fa-angle-right mr-2"></i>Plaćanje</a>
-                            <a class="text-dark" asp-action="LoginView"><i class="fa fa-angle-right mr-2"></i>Login</a>
+                            <a class="text-dark" asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-angle-right mr-2"></i>Login</a>
                         </div>
                     </div>
 
