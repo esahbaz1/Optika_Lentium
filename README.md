@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Konekcijski string za bazu podataka: "Data Source=SQL6032.site4now.net;Initial Catalog=db_aa8bf2_optikalentium;User Id=db_aa8bf2_optikalentium_admin;Password=A12345678"
 
 Pristupni podaci za registrovane korisnike:
@@ -19,3 +20,6 @@ Password: 60-dayfreetrial
 
 
 
+=======
+# Optika_Lentium
+>>>>>>> 1fe3c9fcd813602eaec5a4aa2358d39a1b22d76a
