@@ -20,6 +20,6 @@ Password: 60-dayfreetrial
 
 
 
-=======
+
 # Optika_Lentium
->>>>>>> 1fe3c9fcd813602eaec5a4aa2358d39a1b22d76a
+
